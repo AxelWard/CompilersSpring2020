@@ -1,3 +1,5 @@
+// Code for Axel Ward, Ahmed Naji, and Jacob Ziehli
+
 // Define a grammar called Hello
 grammar Hello;
 r  : 'hello' ID ;         // match keyword hello followed by an identifier
