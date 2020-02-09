@@ -3,14 +3,14 @@ namespace Compilers
 {
 	class Scanner /*Write our scanner code within this class!*/
 	{
-		Scanner()
+	public : Scanner()
 		{
 
 
 		}
 
 
-		Scanner(std::string fileName)
+	public : Scanner(std::string fileName)
 		{
 
 		}
