@@ -1,4 +1,4 @@
-#include "../antlr4-runtime/antlr4-runtime.h"
+#include "antlr4-runtime.h"
 #include "string"
 #include <Compiler\Compiler\src\scanner.cpp>
 
