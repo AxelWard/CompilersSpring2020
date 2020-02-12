@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Compiler:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c268969-eaf7-4f45-89d8-a7f155813eb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLE.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLE.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLEBaseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLEBaseVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLELexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLELexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLELexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLEListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLEParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LITTLE/LITTLEVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Listner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Compilers/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProjectSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/.vs/Compiler/v16/.suo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/.vs/Compiler/v16/Browse.VC.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/.vs/Compiler/v16/ipch/AutoPCH/165f1ae6583cecb6/MAIN.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/.vs/Compiler/v16/ipch/AutoPCH/6b87819d479de2c6/RULECONTEXT.ipch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/Compiler.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/Compiler.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/Compiler.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRErrorListener.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRErrorListener.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRErrorStrategy.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRErrorStrategy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRFileStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRFileStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRInputStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ANTLRInputStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/BailErrorStrategy.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/BailErrorStrategy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/BaseErrorListener.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/BaseErrorListener.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/BufferedTokenStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/BufferedTokenStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CharStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CharStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CommonToken.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CommonToken.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CommonTokenFactory.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CommonTokenFactory.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CommonTokenStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/CommonTokenStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ConsoleErrorListener.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ConsoleErrorListener.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/DefaultErrorStrategy.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/DefaultErrorStrategy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/DiagnosticErrorListener.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/DiagnosticErrorListener.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Exceptions.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Exceptions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/FailedPredicateException.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/FailedPredicateException.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/InputMismatchException.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/InputMismatchException.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/IntStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/IntStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/InterpreterRuleContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/InterpreterRuleContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLE.interp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLE.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLEBaseVisitor.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLEBaseVisitor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLELexer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLELexer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLELexer.interp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLELexer.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLEParser.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLEParser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLEVisitor.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LITTLEVisitor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Lexer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Lexer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LexerInterpreter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LexerInterpreter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LexerNoViableAltException.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/LexerNoViableAltException.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ListTokenSource.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ListTokenSource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/NoViableAltException.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/NoViableAltException.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Parser.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Parser.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ParserInterpreter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ParserInterpreter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ParserRuleContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ParserRuleContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ProxyErrorListener.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/ProxyErrorListener.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RecognitionException.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RecognitionException.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Recognizer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Recognizer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RuleContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RuleContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RuleContextWithAltNum.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RuleContextWithAltNum.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RuntimeMetaData.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/RuntimeMetaData.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Token.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Token.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/TokenFactory.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/TokenSource.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/TokenSource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/TokenStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/TokenStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/TokenStreamRewriter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/TokenStreamRewriter.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/UnbufferedCharStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/UnbufferedCharStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/UnbufferedTokenStream.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/UnbufferedTokenStream.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Vocabulary.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/Vocabulary.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/WritableToken.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/WritableToken.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/antlr4-common.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/antlr4-runtime.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATN.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATN.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNConfig.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNConfig.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNConfigSet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNConfigSet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNDeserializationOptions.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNDeserializationOptions.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNDeserializer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNDeserializer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNSerializer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNSerializer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNSimulator.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNSimulator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ATNType.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/AbstractPredicateTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/AbstractPredicateTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ActionTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ActionTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/AmbiguityInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/AmbiguityInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ArrayPredictionContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ArrayPredictionContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/AtomTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/AtomTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BasicBlockStartState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BasicBlockStartState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BasicState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BasicState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BlockEndState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BlockEndState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BlockStartState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/BlockStartState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ContextSensitivityInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ContextSensitivityInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/DecisionEventInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/DecisionEventInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/DecisionInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/DecisionInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/DecisionState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/DecisionState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/EmptyPredictionContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/EmptyPredictionContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/EpsilonTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/EpsilonTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ErrorInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ErrorInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LL1Analyzer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LL1Analyzer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerATNConfig.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerATNConfig.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerATNSimulator.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerATNSimulator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerActionExecutor.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerActionExecutor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerActionType.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerChannelAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerChannelAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerCustomAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerCustomAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerIndexedCustomAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerIndexedCustomAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerModeAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerModeAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerMoreAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerMoreAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerPopModeAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerPopModeAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerPushModeAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerPushModeAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerSkipAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerSkipAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerTypeAction.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LexerTypeAction.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LookaheadEventInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LookaheadEventInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LoopEndState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/LoopEndState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/NotSetTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/NotSetTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/OrderedATNConfigSet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/OrderedATNConfigSet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ParseInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ParseInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ParserATNSimulator.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ParserATNSimulator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PlusBlockStartState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PlusBlockStartState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PlusLoopbackState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PlusLoopbackState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PrecedencePredicateTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PrecedencePredicateTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredicateEvalInfo.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredicateEvalInfo.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredicateTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredicateTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredictionContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredictionContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredictionMode.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/PredictionMode.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ProfilingATNSimulator.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/ProfilingATNSimulator.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RangeTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RangeTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RuleStartState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RuleStartState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RuleStopState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RuleStopState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RuleTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/RuleTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/SemanticContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/SemanticContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/SetTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/SetTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/SingletonPredictionContext.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/SingletonPredictionContext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/StarBlockStartState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/StarBlockStartState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/StarLoopEntryState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/StarLoopEntryState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/StarLoopbackState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/StarLoopbackState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/TokensStartState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/TokensStartState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/Transition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/Transition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/WildcardTransition.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/atn/WildcardTransition.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/DFA.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/DFA.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/DFASerializer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/DFASerializer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/DFAState.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/DFAState.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/LexerDFASerializer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/dfa/LexerDFASerializer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/InterpreterDataReader.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/InterpreterDataReader.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/Interval.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/Interval.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/IntervalSet.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/IntervalSet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/MurmurHash.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/MurmurHash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/Predicate.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/misc/Predicate.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/Any.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/Any.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/Arrays.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/Arrays.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/BitSet.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/CPPUtils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/CPPUtils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/Declarations.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/StringUtils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/StringUtils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/guid.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/support/guid.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/AbstractParseTreeVisitor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ErrorNode.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ErrorNode.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ErrorNodeImpl.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ErrorNodeImpl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/IterativeParseTreeWalker.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/IterativeParseTreeWalker.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTree.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTree.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTreeListener.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTreeListener.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTreeProperty.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTreeVisitor.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTreeVisitor.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTreeWalker.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/ParseTreeWalker.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/TerminalNode.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/TerminalNode.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/TerminalNodeImpl.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/TerminalNodeImpl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/Trees.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/Trees.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/Chunk.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/Chunk.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/ParseTreeMatch.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/ParseTreeMatch.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/ParseTreePattern.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/ParseTreePattern.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/ParseTreePatternMatcher.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/ParseTreePatternMatcher.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/RuleTagToken.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/RuleTagToken.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/TagChunk.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/TagChunk.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/TextChunk.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/TextChunk.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/TokenTagToken.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/pattern/TokenTagToken.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPath.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPath.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathElement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathElement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathLexer.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathLexer.g4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathLexer.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathLexer.tokens" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathLexerErrorListener.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathLexerErrorListener.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathRuleAnywhereElement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathRuleAnywhereElement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathRuleElement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathRuleElement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathTokenAnywhereElement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathTokenAnywhereElement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathTokenElement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathTokenElement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathWildcardAnywhereElement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathWildcardElement.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/antlr4-runtime/tree/xpath/XPathWildcardElement.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/grammars/Hello.g4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/grammars/LITTLE.g4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/grammars/grammer.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/src/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Compiler/Compiler/src/scanner.cpp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XgeOwzwKthc5cWtwpujFGB5e3S" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Program Files (x86)/Java/Javalib/antlr-4.8-complete.jar!/" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Compiler" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c268969-eaf7-4f45-89d8-a7f155813eb1" name="Default Changelist" comment="" />
+      <created>1581472137163</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581472137163</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="450" y="250" key="#Notifications" timestamp="1581472189840">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="450" y="250" key="#Notifications/0.40.1714.1103@0.40.1714.1103" timestamp="1581472189840" />
+    <state x="615" y="443" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581496038309">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="615" y="443" key="#com.intellij.ide.util.TreeClassChooserDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1581496038309" />
+    <state x="605" y="448" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581485580988">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="605" y="448" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.1714.1103@0.40.1714.1103" timestamp="1581485580988" />
+    <state x="507" y="379" key="FileChooserDialogImpl" timestamp="1581482395807">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="507" y="379" key="FileChooserDialogImpl/0.40.1714.1103@0.40.1714.1103" timestamp="1581482395807" />
+    <state width="1671" height="334" key="GridCell.Tab.0.bottom" timestamp="1581496328826">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state width="1671" height="334" key="GridCell.Tab.0.bottom/0.40.1714.1103@0.40.1714.1103" timestamp="1581496328826" />
+    <state width="1671" height="334" key="GridCell.Tab.0.center" timestamp="1581496328826">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state width="1671" height="334" key="GridCell.Tab.0.center/0.40.1714.1103@0.40.1714.1103" timestamp="1581496328826" />
+    <state width="1671" height="334" key="GridCell.Tab.0.left" timestamp="1581496328825">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state width="1671" height="334" key="GridCell.Tab.0.left/0.40.1714.1103@0.40.1714.1103" timestamp="1581496328825" />
+    <state width="1671" height="334" key="GridCell.Tab.0.right" timestamp="1581496328826">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state width="1671" height="334" key="GridCell.Tab.0.right/0.40.1714.1103@0.40.1714.1103" timestamp="1581496328826" />
+    <state x="366" y="234" key="SettingsEditor" timestamp="1581496099540">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="366" y="234" key="SettingsEditor/0.40.1714.1103@0.40.1714.1103" timestamp="1581496099540" />
+    <state x="93" y="133" width="1528" height="917" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1581491661574">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="93" y="133" width="1528" height="917" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1581491661574" />
+    <state x="558" y="415" key="com.intellij.ide.util.TipDialog" timestamp="1581472148251">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="558" y="415" key="com.intellij.ide.util.TipDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1581472148251" />
+    <state x="520" y="281" width="672" height="678" key="search.everywhere.popup" timestamp="1581494346756">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="520" y="281" width="672" height="678" key="search.everywhere.popup/0.40.1714.1103@0.40.1714.1103" timestamp="1581494346756" />
+  </component>
+</project>
