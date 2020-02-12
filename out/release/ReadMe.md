@@ -1,8 +1,8 @@
 Command to run program:
 
-java -jar Compiler.jar "TestFiles/Step1/fibonacci.micro" Outputs
+Micro [0] [1]
 
 Arguments: [0] - Path to test .micro file
            [1] - Output directory (optional)
 
-Requires Java 11 to run
+Requires Java 11 or higher to run
