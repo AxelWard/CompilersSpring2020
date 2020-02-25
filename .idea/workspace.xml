@@ -6,7 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c268969-eaf7-4f45-89d8-a7f155813eb1" name="Default Changelist" comment="" />
+    <list default="true" id="2c268969-eaf7-4f45-89d8-a7f155813eb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammars/LITTLE.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammars/LITTLE.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Listner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,8 +38,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Program Files (x86)/Java/Javalib/antlr-4.8-complete.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Step2/inputs/test3.micro" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -76,14 +83,18 @@
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="615" y="443" key="#com.intellij.ide.util.TreeClassChooserDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1581496038309" />
+    <state x="588" y="339" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582582669391">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="588" y="339" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1582582669391" />
     <state x="605" y="448" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581485580988">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="605" y="448" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.1714.1103@0.40.1714.1103" timestamp="1581485580988" />
-    <state x="507" y="379" key="FileChooserDialogImpl" timestamp="1581482395807">
+    <state x="507" y="379" key="FileChooserDialogImpl" timestamp="1582583060210">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state x="507" y="379" key="FileChooserDialogImpl/0.40.1714.1103@0.40.1714.1103" timestamp="1581482395807" />
+    <state x="507" y="379" key="FileChooserDialogImpl/0.40.1714.1103@0.40.1714.1103" timestamp="1582583060210" />
     <state width="1671" height="334" key="GridCell.Tab.0.bottom" timestamp="1581496328826">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
