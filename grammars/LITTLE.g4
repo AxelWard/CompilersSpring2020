@@ -65,7 +65,6 @@ compop            : EQ_OP | LESS_OP | GREAT_OP | NOTEQ_OP | LESSEQ_OP | GREATEQ_
 while_stmt       : WHILE_KEYWORD OPEN_OP cond CLOSE_OP decl stmt_list ENDWHILE_KEYWORD ;
 
 //---------------------------------------
-
 // Lexer Rules
 PRG_KEYWORD      : 'PROGRAM';
 BEG_KEYWORD      : 'BEGIN';

@@ -17,8 +17,14 @@ public class LITTLEParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		KEYWORD=1, OPERATOR=2, COMMENT=3, IDENTIFIER=4, INTLITERAL=5, FLOATLITERAL=6, 
-		STRINGLITERAL=7, WS=8;
+		PRG_KEYWORD=1, BEG_KEYWORD=2, END_KEYWORD=3, FUNC_KEYWORD=4, READ_KEYWORD=5, 
+		WRITE_KEYWORD=6, IF_KEYWORD=7, ELSE_KEYWORD=8, ENDIF_KEYWORD=9, WHILE_KEYWORD=10, 
+		ENDWHILE_KEYWORD=11, CONT_KEYWORD=12, BRK_KEYWORD=13, RETN_KEYWORD=14, 
+		INT_KEYWORD=15, VOID_KEYWORD=16, STR_KEYWORD=17, FLT_KEYWORD=18, PLUS_OP=19, 
+		MULT_OP=20, DIV_OP=21, SUB_OP=22, ASSIGN_OP=23, OPEN_OP=24, CLOSE_OP=25, 
+		COMMA_OP=26, EQ_OP=27, LESS_OP=28, GREAT_OP=29, NOTEQ_OP=30, LESSEQ_OP=31, 
+		GREATEQ_OP=32, SEMICOLON=33, COMMENT=34, IDENTIFIER=35, INTLITERAL=36, 
+		FLOATLITERAL=37, STRINGLITERAL=38, WS=39;
 	public static final int
 		RULE_program = 0, RULE_id = 1, RULE_pgm_body = 2, RULE_decl = 3, RULE_string_decl = 4, 
 		RULE_str = 5, RULE_var_decl = 6, RULE_var_type = 7, RULE_any_type = 8, 
@@ -46,13 +52,23 @@ public class LITTLEParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
+			null, "'PROGRAM'", "'BEGIN'", "'END'", "'FUNCTION'", "'READ'", "'WRITE'", 
+			"'IF'", "'ELSE'", "'ENDIF'", "'WHILE'", "'ENDWHILE'", "'CONTINUE'", "'BREAK'", 
+			"'RETURN'", "'INT'", "'VOID'", "'STRING'", "'FLOAT'", "'+'", "'*'", "'/'", 
+			"'-'", "':='", "'('", "')'", "','", "'='", "'<'", "'>'", "'!='", "'<='", 
+			"'>='", "';'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "KEYWORD", "OPERATOR", "COMMENT", "IDENTIFIER", "INTLITERAL", "FLOATLITERAL", 
-			"STRINGLITERAL", "WS"
+			null, "PRG_KEYWORD", "BEG_KEYWORD", "END_KEYWORD", "FUNC_KEYWORD", "READ_KEYWORD", 
+			"WRITE_KEYWORD", "IF_KEYWORD", "ELSE_KEYWORD", "ENDIF_KEYWORD", "WHILE_KEYWORD", 
+			"ENDWHILE_KEYWORD", "CONT_KEYWORD", "BRK_KEYWORD", "RETN_KEYWORD", "INT_KEYWORD", 
+			"VOID_KEYWORD", "STR_KEYWORD", "FLT_KEYWORD", "PLUS_OP", "MULT_OP", "DIV_OP", 
+			"SUB_OP", "ASSIGN_OP", "OPEN_OP", "CLOSE_OP", "COMMA_OP", "EQ_OP", "LESS_OP", 
+			"GREAT_OP", "NOTEQ_OP", "LESSEQ_OP", "GREATEQ_OP", "SEMICOLON", "COMMENT", 
+			"IDENTIFIER", "INTLITERAL", "FLOATLITERAL", "STRINGLITERAL", "WS"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -107,16 +123,15 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class ProgramContext extends ParserRuleContext {
-		public List<TerminalNode> KEYWORD() { return getTokens(LITTLEParser.KEYWORD); }
-		public TerminalNode KEYWORD(int i) {
-			return getToken(LITTLEParser.KEYWORD, i);
-		}
+		public TerminalNode PRG_KEYWORD() { return getToken(LITTLEParser.PRG_KEYWORD, 0); }
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
+		public TerminalNode BEG_KEYWORD() { return getToken(LITTLEParser.BEG_KEYWORD, 0); }
 		public Pgm_bodyContext pgm_body() {
 			return getRuleContext(Pgm_bodyContext.class,0);
 		}
+		public TerminalNode END_KEYWORD() { return getToken(LITTLEParser.END_KEYWORD, 0); }
 		public TerminalNode EOF() { return getToken(LITTLEParser.EOF, 0); }
 		public ProgramContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -144,15 +159,15 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(82);
-			match(KEYWORD);
+			match(PRG_KEYWORD);
 			setState(83);
 			id();
 			setState(84);
-			match(KEYWORD);
+			match(BEG_KEYWORD);
 			setState(85);
 			pgm_body();
 			setState(86);
-			match(KEYWORD);
+			match(END_KEYWORD);
 			setState(87);
 			match(EOF);
 			}
@@ -294,8 +309,8 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(101);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,0,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case STR_KEYWORD:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(94);
@@ -304,7 +319,8 @@ public class LITTLEParser extends Parser {
 				decl();
 				}
 				break;
-			case 2:
+			case INT_KEYWORD:
+			case FLT_KEYWORD:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(97);
@@ -313,11 +329,23 @@ public class LITTLEParser extends Parser {
 				decl();
 				}
 				break;
-			case 3:
+			case END_KEYWORD:
+			case FUNC_KEYWORD:
+			case READ_KEYWORD:
+			case WRITE_KEYWORD:
+			case IF_KEYWORD:
+			case ELSE_KEYWORD:
+			case ENDIF_KEYWORD:
+			case WHILE_KEYWORD:
+			case ENDWHILE_KEYWORD:
+			case RETN_KEYWORD:
+			case IDENTIFIER:
 				enterOuterAlt(_localctx, 3);
 				{
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -332,17 +360,15 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class String_declContext extends ParserRuleContext {
-		public TerminalNode KEYWORD() { return getToken(LITTLEParser.KEYWORD, 0); }
+		public TerminalNode STR_KEYWORD() { return getToken(LITTLEParser.STR_KEYWORD, 0); }
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode ASSIGN_OP() { return getToken(LITTLEParser.ASSIGN_OP, 0); }
 		public StrContext str() {
 			return getRuleContext(StrContext.class,0);
 		}
+		public TerminalNode SEMICOLON() { return getToken(LITTLEParser.SEMICOLON, 0); }
 		public String_declContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -369,15 +395,15 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(103);
-			match(KEYWORD);
+			match(STR_KEYWORD);
 			setState(104);
 			id();
 			setState(105);
-			match(OPERATOR);
+			match(ASSIGN_OP);
 			setState(106);
 			str();
 			setState(107);
-			match(OPERATOR);
+			match(SEMICOLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -440,7 +466,7 @@ public class LITTLEParser extends Parser {
 		public Id_listContext id_list() {
 			return getRuleContext(Id_listContext.class,0);
 		}
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode SEMICOLON() { return getToken(LITTLEParser.SEMICOLON, 0); }
 		public Var_declContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -471,7 +497,7 @@ public class LITTLEParser extends Parser {
 			setState(112);
 			id_list();
 			setState(113);
-			match(OPERATOR);
+			match(SEMICOLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -486,7 +512,8 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Var_typeContext extends ParserRuleContext {
-		public TerminalNode KEYWORD() { return getToken(LITTLEParser.KEYWORD, 0); }
+		public TerminalNode INT_KEYWORD() { return getToken(LITTLEParser.INT_KEYWORD, 0); }
+		public TerminalNode FLT_KEYWORD() { return getToken(LITTLEParser.FLT_KEYWORD, 0); }
 		public Var_typeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -515,7 +542,7 @@ public class LITTLEParser extends Parser {
 			{
 			setState(115);
 			_la = _input.LA(1);
-			if ( !(_la==KEYWORD) ) {
+			if ( !(_la==INT_KEYWORD || _la==FLT_KEYWORD) ) {
 			_errHandler.recoverInline(this);
 			}
 			else {
@@ -540,7 +567,7 @@ public class LITTLEParser extends Parser {
 		public Var_typeContext var_type() {
 			return getRuleContext(Var_typeContext.class,0);
 		}
-		public TerminalNode KEYWORD() { return getToken(LITTLEParser.KEYWORD, 0); }
+		public TerminalNode VOID_KEYWORD() { return getToken(LITTLEParser.VOID_KEYWORD, 0); }
 		public Any_typeContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -566,21 +593,24 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(119);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case INT_KEYWORD:
+			case FLT_KEYWORD:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(117);
 				var_type();
 				}
 				break;
-			case 2:
+			case VOID_KEYWORD:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(118);
-				match(KEYWORD);
+				match(VOID_KEYWORD);
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -644,7 +674,7 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Id_tailContext extends ParserRuleContext {
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode COMMA_OP() { return getToken(LITTLEParser.COMMA_OP, 0); }
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
@@ -676,23 +706,26 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(129);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case COMMA_OP:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(124);
-				match(OPERATOR);
+				match(COMMA_OP);
 				setState(125);
 				id();
 				setState(126);
 				id_tail();
 				}
 				break;
-			case 2:
+			case CLOSE_OP:
+			case SEMICOLON:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -739,7 +772,8 @@ public class LITTLEParser extends Parser {
 			setState(135);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case KEYWORD:
+			case INT_KEYWORD:
+			case FLT_KEYWORD:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(131);
@@ -748,7 +782,7 @@ public class LITTLEParser extends Parser {
 				param_decl_tail();
 				}
 				break;
-			case OPERATOR:
+			case CLOSE_OP:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
@@ -818,7 +852,7 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Param_decl_tailContext extends ParserRuleContext {
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode COMMA_OP() { return getToken(LITTLEParser.COMMA_OP, 0); }
 		public Param_declContext param_decl() {
 			return getRuleContext(Param_declContext.class,0);
 		}
@@ -850,23 +884,25 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(145);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case COMMA_OP:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(140);
-				match(OPERATOR);
+				match(COMMA_OP);
 				setState(141);
 				param_decl();
 				setState(142);
 				param_decl_tail();
 				}
 				break;
-			case 2:
+			case CLOSE_OP:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -912,8 +948,8 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(151);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,5,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case FUNC_KEYWORD:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(147);
@@ -922,11 +958,13 @@ public class LITTLEParser extends Parser {
 				func_declarations();
 				}
 				break;
-			case 2:
+			case END_KEYWORD:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -941,26 +979,23 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Func_declContext extends ParserRuleContext {
-		public List<TerminalNode> KEYWORD() { return getTokens(LITTLEParser.KEYWORD); }
-		public TerminalNode KEYWORD(int i) {
-			return getToken(LITTLEParser.KEYWORD, i);
-		}
+		public TerminalNode FUNC_KEYWORD() { return getToken(LITTLEParser.FUNC_KEYWORD, 0); }
 		public Any_typeContext any_type() {
 			return getRuleContext(Any_typeContext.class,0);
 		}
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode OPEN_OP() { return getToken(LITTLEParser.OPEN_OP, 0); }
 		public Param_decl_listContext param_decl_list() {
 			return getRuleContext(Param_decl_listContext.class,0);
 		}
+		public TerminalNode CLOSE_OP() { return getToken(LITTLEParser.CLOSE_OP, 0); }
+		public TerminalNode BEG_KEYWORD() { return getToken(LITTLEParser.BEG_KEYWORD, 0); }
 		public Func_bodyContext func_body() {
 			return getRuleContext(Func_bodyContext.class,0);
 		}
+		public TerminalNode END_KEYWORD() { return getToken(LITTLEParser.END_KEYWORD, 0); }
 		public Func_declContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -987,23 +1022,23 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(153);
-			match(KEYWORD);
+			match(FUNC_KEYWORD);
 			setState(154);
 			any_type();
 			setState(155);
 			id();
 			setState(156);
-			match(OPERATOR);
+			match(OPEN_OP);
 			setState(157);
 			param_decl_list();
 			setState(158);
-			match(OPERATOR);
+			match(CLOSE_OP);
 			setState(159);
-			match(KEYWORD);
+			match(BEG_KEYWORD);
 			setState(160);
 			func_body();
 			setState(161);
-			match(KEYWORD);
+			match(END_KEYWORD);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1098,8 +1133,13 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(170);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,6,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case READ_KEYWORD:
+			case WRITE_KEYWORD:
+			case IF_KEYWORD:
+			case WHILE_KEYWORD:
+			case RETN_KEYWORD:
+			case IDENTIFIER:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(166);
@@ -1108,11 +1148,16 @@ public class LITTLEParser extends Parser {
 				stmt_list();
 				}
 				break;
-			case 2:
+			case END_KEYWORD:
+			case ELSE_KEYWORD:
+			case ENDIF_KEYWORD:
+			case ENDWHILE_KEYWORD:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1161,28 +1206,33 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(175);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,7,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case READ_KEYWORD:
+			case WRITE_KEYWORD:
+			case RETN_KEYWORD:
+			case IDENTIFIER:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(172);
 				base_stmt();
 				}
 				break;
-			case 2:
+			case IF_KEYWORD:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(173);
 				if_stmt();
 				}
 				break;
-			case 3:
+			case WHILE_KEYWORD:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(174);
 				while_stmt();
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1234,35 +1284,37 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(181);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,8,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case IDENTIFIER:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(177);
 				assign_stmt();
 				}
 				break;
-			case 2:
+			case READ_KEYWORD:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(178);
 				read_stmt();
 				}
 				break;
-			case 3:
+			case WRITE_KEYWORD:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(179);
 				write_stmt();
 				}
 				break;
-			case 4:
+			case RETN_KEYWORD:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(180);
 				return_stmt();
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1280,7 +1332,7 @@ public class LITTLEParser extends Parser {
 		public Assign_exprContext assign_expr() {
 			return getRuleContext(Assign_exprContext.class,0);
 		}
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode SEMICOLON() { return getToken(LITTLEParser.SEMICOLON, 0); }
 		public Assign_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1309,7 +1361,7 @@ public class LITTLEParser extends Parser {
 			setState(183);
 			assign_expr();
 			setState(184);
-			match(OPERATOR);
+			match(SEMICOLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1327,7 +1379,7 @@ public class LITTLEParser extends Parser {
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode ASSIGN_OP() { return getToken(LITTLEParser.ASSIGN_OP, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
@@ -1359,7 +1411,7 @@ public class LITTLEParser extends Parser {
 			setState(186);
 			id();
 			setState(187);
-			match(OPERATOR);
+			match(ASSIGN_OP);
 			setState(188);
 			expr();
 			}
@@ -1376,14 +1428,13 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Read_stmtContext extends ParserRuleContext {
-		public TerminalNode KEYWORD() { return getToken(LITTLEParser.KEYWORD, 0); }
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode READ_KEYWORD() { return getToken(LITTLEParser.READ_KEYWORD, 0); }
+		public TerminalNode OPEN_OP() { return getToken(LITTLEParser.OPEN_OP, 0); }
 		public Id_listContext id_list() {
 			return getRuleContext(Id_listContext.class,0);
 		}
+		public TerminalNode CLOSE_OP() { return getToken(LITTLEParser.CLOSE_OP, 0); }
+		public TerminalNode SEMICOLON() { return getToken(LITTLEParser.SEMICOLON, 0); }
 		public Read_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1410,15 +1461,15 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(190);
-			match(KEYWORD);
+			match(READ_KEYWORD);
 			setState(191);
-			match(OPERATOR);
+			match(OPEN_OP);
 			setState(192);
 			id_list();
 			setState(193);
-			match(OPERATOR);
+			match(CLOSE_OP);
 			setState(194);
-			match(OPERATOR);
+			match(SEMICOLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1433,14 +1484,13 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Write_stmtContext extends ParserRuleContext {
-		public TerminalNode KEYWORD() { return getToken(LITTLEParser.KEYWORD, 0); }
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode WRITE_KEYWORD() { return getToken(LITTLEParser.WRITE_KEYWORD, 0); }
+		public TerminalNode OPEN_OP() { return getToken(LITTLEParser.OPEN_OP, 0); }
 		public Id_listContext id_list() {
 			return getRuleContext(Id_listContext.class,0);
 		}
+		public TerminalNode CLOSE_OP() { return getToken(LITTLEParser.CLOSE_OP, 0); }
+		public TerminalNode SEMICOLON() { return getToken(LITTLEParser.SEMICOLON, 0); }
 		public Write_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1467,15 +1517,15 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(196);
-			match(KEYWORD);
+			match(WRITE_KEYWORD);
 			setState(197);
-			match(OPERATOR);
+			match(OPEN_OP);
 			setState(198);
 			id_list();
 			setState(199);
-			match(OPERATOR);
+			match(CLOSE_OP);
 			setState(200);
-			match(OPERATOR);
+			match(SEMICOLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1490,11 +1540,11 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Return_stmtContext extends ParserRuleContext {
-		public TerminalNode KEYWORD() { return getToken(LITTLEParser.KEYWORD, 0); }
+		public TerminalNode RETN_KEYWORD() { return getToken(LITTLEParser.RETN_KEYWORD, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode SEMICOLON() { return getToken(LITTLEParser.SEMICOLON, 0); }
 		public Return_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1521,11 +1571,11 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(202);
-			match(KEYWORD);
+			match(RETN_KEYWORD);
 			setState(203);
 			expr();
 			setState(204);
-			match(OPERATOR);
+			match(SEMICOLON);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1869,13 +1919,11 @@ public class LITTLEParser extends Parser {
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode OPEN_OP() { return getToken(LITTLEParser.OPEN_OP, 0); }
 		public Expr_listContext expr_list() {
 			return getRuleContext(Expr_listContext.class,0);
 		}
+		public TerminalNode CLOSE_OP() { return getToken(LITTLEParser.CLOSE_OP, 0); }
 		public Call_exprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1904,11 +1952,11 @@ public class LITTLEParser extends Parser {
 			setState(236);
 			id();
 			setState(237);
-			match(OPERATOR);
+			match(OPEN_OP);
 			setState(238);
 			expr_list();
 			setState(239);
-			match(OPERATOR);
+			match(CLOSE_OP);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1983,7 +2031,7 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Expr_list_tailContext extends ParserRuleContext {
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode COMMA_OP() { return getToken(LITTLEParser.COMMA_OP, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
@@ -2015,23 +2063,25 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(252);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,13,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case COMMA_OP:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(247);
-				match(OPERATOR);
+				match(COMMA_OP);
 				setState(248);
 				expr();
 				setState(249);
 				expr_list_tail();
 				}
 				break;
-			case 2:
+			case CLOSE_OP:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2046,13 +2096,11 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class PrimaryContext extends ParserRuleContext {
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode OPEN_OP() { return getToken(LITTLEParser.OPEN_OP, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
+		public TerminalNode CLOSE_OP() { return getToken(LITTLEParser.CLOSE_OP, 0); }
 		public IdContext id() {
 			return getRuleContext(IdContext.class,0);
 		}
@@ -2084,15 +2132,15 @@ public class LITTLEParser extends Parser {
 			setState(261);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case OPERATOR:
+			case OPEN_OP:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(254);
-				match(OPERATOR);
+				match(OPEN_OP);
 				setState(255);
 				expr();
 				setState(256);
-				match(OPERATOR);
+				match(CLOSE_OP);
 				}
 				break;
 			case IDENTIFIER:
@@ -2132,7 +2180,8 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class AddopContext extends ParserRuleContext {
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode PLUS_OP() { return getToken(LITTLEParser.PLUS_OP, 0); }
+		public TerminalNode SUB_OP() { return getToken(LITTLEParser.SUB_OP, 0); }
 		public AddopContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2155,11 +2204,20 @@ public class LITTLEParser extends Parser {
 	public final AddopContext addop() throws RecognitionException {
 		AddopContext _localctx = new AddopContext(_ctx, getState());
 		enterRule(_localctx, 68, RULE_addop);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(263);
-			match(OPERATOR);
+			_la = _input.LA(1);
+			if ( !(_la==PLUS_OP || _la==SUB_OP) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -2174,7 +2232,8 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class MulopContext extends ParserRuleContext {
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode MULT_OP() { return getToken(LITTLEParser.MULT_OP, 0); }
+		public TerminalNode DIV_OP() { return getToken(LITTLEParser.DIV_OP, 0); }
 		public MulopContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2197,11 +2256,20 @@ public class LITTLEParser extends Parser {
 	public final MulopContext mulop() throws RecognitionException {
 		MulopContext _localctx = new MulopContext(_ctx, getState());
 		enterRule(_localctx, 70, RULE_mulop);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(265);
-			match(OPERATOR);
+			_la = _input.LA(1);
+			if ( !(_la==MULT_OP || _la==DIV_OP) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -2216,17 +2284,12 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class If_stmtContext extends ParserRuleContext {
-		public List<TerminalNode> KEYWORD() { return getTokens(LITTLEParser.KEYWORD); }
-		public TerminalNode KEYWORD(int i) {
-			return getToken(LITTLEParser.KEYWORD, i);
-		}
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode IF_KEYWORD() { return getToken(LITTLEParser.IF_KEYWORD, 0); }
+		public TerminalNode OPEN_OP() { return getToken(LITTLEParser.OPEN_OP, 0); }
 		public CondContext cond() {
 			return getRuleContext(CondContext.class,0);
 		}
+		public TerminalNode CLOSE_OP() { return getToken(LITTLEParser.CLOSE_OP, 0); }
 		public DeclContext decl() {
 			return getRuleContext(DeclContext.class,0);
 		}
@@ -2236,6 +2299,7 @@ public class LITTLEParser extends Parser {
 		public Else_partContext else_part() {
 			return getRuleContext(Else_partContext.class,0);
 		}
+		public TerminalNode ENDIF_KEYWORD() { return getToken(LITTLEParser.ENDIF_KEYWORD, 0); }
 		public If_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2262,13 +2326,13 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(267);
-			match(KEYWORD);
+			match(IF_KEYWORD);
 			setState(268);
-			match(OPERATOR);
+			match(OPEN_OP);
 			setState(269);
 			cond();
 			setState(270);
-			match(OPERATOR);
+			match(CLOSE_OP);
 			setState(271);
 			decl();
 			setState(272);
@@ -2276,7 +2340,7 @@ public class LITTLEParser extends Parser {
 			setState(273);
 			else_part();
 			setState(274);
-			match(KEYWORD);
+			match(ENDIF_KEYWORD);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2291,7 +2355,7 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class Else_partContext extends ParserRuleContext {
-		public TerminalNode KEYWORD() { return getToken(LITTLEParser.KEYWORD, 0); }
+		public TerminalNode ELSE_KEYWORD() { return getToken(LITTLEParser.ELSE_KEYWORD, 0); }
 		public DeclContext decl() {
 			return getRuleContext(DeclContext.class,0);
 		}
@@ -2323,23 +2387,25 @@ public class LITTLEParser extends Parser {
 		try {
 			setState(281);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,15,_ctx) ) {
-			case 1:
+			switch (_input.LA(1)) {
+			case ELSE_KEYWORD:
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(276);
-				match(KEYWORD);
+				match(ELSE_KEYWORD);
 				setState(277);
 				decl();
 				setState(278);
 				stmt_list();
 				}
 				break;
-			case 2:
+			case ENDIF_KEYWORD:
 				enterOuterAlt(_localctx, 2);
 				{
 				}
 				break;
+			default:
+				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2408,7 +2474,12 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class CompopContext extends ParserRuleContext {
-		public TerminalNode OPERATOR() { return getToken(LITTLEParser.OPERATOR, 0); }
+		public TerminalNode EQ_OP() { return getToken(LITTLEParser.EQ_OP, 0); }
+		public TerminalNode LESS_OP() { return getToken(LITTLEParser.LESS_OP, 0); }
+		public TerminalNode GREAT_OP() { return getToken(LITTLEParser.GREAT_OP, 0); }
+		public TerminalNode NOTEQ_OP() { return getToken(LITTLEParser.NOTEQ_OP, 0); }
+		public TerminalNode LESSEQ_OP() { return getToken(LITTLEParser.LESSEQ_OP, 0); }
+		public TerminalNode GREATEQ_OP() { return getToken(LITTLEParser.GREATEQ_OP, 0); }
 		public CompopContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2431,11 +2502,20 @@ public class LITTLEParser extends Parser {
 	public final CompopContext compop() throws RecognitionException {
 		CompopContext _localctx = new CompopContext(_ctx, getState());
 		enterRule(_localctx, 78, RULE_compop);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(287);
-			match(OPERATOR);
+			_la = _input.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << EQ_OP) | (1L << LESS_OP) | (1L << GREAT_OP) | (1L << NOTEQ_OP) | (1L << LESSEQ_OP) | (1L << GREATEQ_OP))) != 0)) ) {
+			_errHandler.recoverInline(this);
+			}
+			else {
+				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+				_errHandler.reportMatch(this);
+				consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -2450,23 +2530,19 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static class While_stmtContext extends ParserRuleContext {
-		public List<TerminalNode> KEYWORD() { return getTokens(LITTLEParser.KEYWORD); }
-		public TerminalNode KEYWORD(int i) {
-			return getToken(LITTLEParser.KEYWORD, i);
-		}
-		public List<TerminalNode> OPERATOR() { return getTokens(LITTLEParser.OPERATOR); }
-		public TerminalNode OPERATOR(int i) {
-			return getToken(LITTLEParser.OPERATOR, i);
-		}
+		public TerminalNode WHILE_KEYWORD() { return getToken(LITTLEParser.WHILE_KEYWORD, 0); }
+		public TerminalNode OPEN_OP() { return getToken(LITTLEParser.OPEN_OP, 0); }
 		public CondContext cond() {
 			return getRuleContext(CondContext.class,0);
 		}
+		public TerminalNode CLOSE_OP() { return getToken(LITTLEParser.CLOSE_OP, 0); }
 		public DeclContext decl() {
 			return getRuleContext(DeclContext.class,0);
 		}
 		public Stmt_listContext stmt_list() {
 			return getRuleContext(Stmt_listContext.class,0);
 		}
+		public TerminalNode ENDWHILE_KEYWORD() { return getToken(LITTLEParser.ENDWHILE_KEYWORD, 0); }
 		public While_stmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -2493,19 +2569,19 @@ public class LITTLEParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(289);
-			match(KEYWORD);
+			match(WHILE_KEYWORD);
 			setState(290);
-			match(OPERATOR);
+			match(OPEN_OP);
 			setState(291);
 			cond();
 			setState(292);
-			match(OPERATOR);
+			match(CLOSE_OP);
 			setState(293);
 			decl();
 			setState(294);
 			stmt_list();
 			setState(295);
-			match(KEYWORD);
+			match(ENDWHILE_KEYWORD);
 			}
 		}
 		catch (RecognitionException re) {
@@ -2544,7 +2620,7 @@ public class LITTLEParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\n\u012c\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3)\u012c\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31\t\31"+
@@ -2565,76 +2641,78 @@ public class LITTLEParser extends Parser {
 		"\3\"\3\"\5\"\u00ff\n\"\3#\3#\3#\3#\3#\3#\3#\5#\u0108\n#\3$\3$\3%\3%\3"+
 		"&\3&\3&\3&\3&\3&\3&\3&\3&\3\'\3\'\3\'\3\'\3\'\5\'\u011c\n\'\3(\3(\3(\3"+
 		"(\3)\3)\3*\3*\3*\3*\3*\3*\3*\3*\3*\2\4\66:+\2\4\6\b\n\f\16\20\22\24\26"+
-		"\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPR\2\3\3\2\3\3\2\u0118\2"+
-		"T\3\2\2\2\4[\3\2\2\2\6]\3\2\2\2\bg\3\2\2\2\ni\3\2\2\2\fo\3\2\2\2\16q\3"+
-		"\2\2\2\20u\3\2\2\2\22y\3\2\2\2\24{\3\2\2\2\26\u0083\3\2\2\2\30\u0089\3"+
-		"\2\2\2\32\u008b\3\2\2\2\34\u0093\3\2\2\2\36\u0099\3\2\2\2 \u009b\3\2\2"+
-		"\2\"\u00a5\3\2\2\2$\u00ac\3\2\2\2&\u00b1\3\2\2\2(\u00b7\3\2\2\2*\u00b9"+
-		"\3\2\2\2,\u00bc\3\2\2\2.\u00c0\3\2\2\2\60\u00c6\3\2\2\2\62\u00cc\3\2\2"+
-		"\2\64\u00d0\3\2\2\2\66\u00d3\3\2\2\28\u00dd\3\2\2\2:\u00e0\3\2\2\2<\u00ec"+
-		"\3\2\2\2>\u00ee\3\2\2\2@\u00f7\3\2\2\2B\u00fe\3\2\2\2D\u0107\3\2\2\2F"+
-		"\u0109\3\2\2\2H\u010b\3\2\2\2J\u010d\3\2\2\2L\u011b\3\2\2\2N\u011d\3\2"+
-		"\2\2P\u0121\3\2\2\2R\u0123\3\2\2\2TU\7\3\2\2UV\5\4\3\2VW\7\3\2\2WX\5\6"+
-		"\4\2XY\7\3\2\2YZ\7\2\2\3Z\3\3\2\2\2[\\\7\6\2\2\\\5\3\2\2\2]^\5\b\5\2^"+
-		"_\5\36\20\2_\7\3\2\2\2`a\5\n\6\2ab\5\b\5\2bh\3\2\2\2cd\5\16\b\2de\5\b"+
-		"\5\2eh\3\2\2\2fh\3\2\2\2g`\3\2\2\2gc\3\2\2\2gf\3\2\2\2h\t\3\2\2\2ij\7"+
-		"\3\2\2jk\5\4\3\2kl\7\4\2\2lm\5\f\7\2mn\7\4\2\2n\13\3\2\2\2op\7\t\2\2p"+
-		"\r\3\2\2\2qr\5\20\t\2rs\5\24\13\2st\7\4\2\2t\17\3\2\2\2uv\t\2\2\2v\21"+
-		"\3\2\2\2wz\5\20\t\2xz\7\3\2\2yw\3\2\2\2yx\3\2\2\2z\23\3\2\2\2{|\5\4\3"+
-		"\2|}\5\26\f\2}\25\3\2\2\2~\177\7\4\2\2\177\u0080\5\4\3\2\u0080\u0081\5"+
-		"\26\f\2\u0081\u0084\3\2\2\2\u0082\u0084\3\2\2\2\u0083~\3\2\2\2\u0083\u0082"+
-		"\3\2\2\2\u0084\27\3\2\2\2\u0085\u0086\5\32\16\2\u0086\u0087\5\34\17\2"+
-		"\u0087\u008a\3\2\2\2\u0088\u008a\3\2\2\2\u0089\u0085\3\2\2\2\u0089\u0088"+
-		"\3\2\2\2\u008a\31\3\2\2\2\u008b\u008c\5\20\t\2\u008c\u008d\5\4\3\2\u008d"+
-		"\33\3\2\2\2\u008e\u008f\7\4\2\2\u008f\u0090\5\32\16\2\u0090\u0091\5\34"+
-		"\17\2\u0091\u0094\3\2\2\2\u0092\u0094\3\2\2\2\u0093\u008e\3\2\2\2\u0093"+
-		"\u0092\3\2\2\2\u0094\35\3\2\2\2\u0095\u0096\5 \21\2\u0096\u0097\5\36\20"+
-		"\2\u0097\u009a\3\2\2\2\u0098\u009a\3\2\2\2\u0099\u0095\3\2\2\2\u0099\u0098"+
-		"\3\2\2\2\u009a\37\3\2\2\2\u009b\u009c\7\3\2\2\u009c\u009d\5\22\n\2\u009d"+
-		"\u009e\5\4\3\2\u009e\u009f\7\4\2\2\u009f\u00a0\5\30\r\2\u00a0\u00a1\7"+
-		"\4\2\2\u00a1\u00a2\7\3\2\2\u00a2\u00a3\5\"\22\2\u00a3\u00a4\7\3\2\2\u00a4"+
-		"!\3\2\2\2\u00a5\u00a6\5\b\5\2\u00a6\u00a7\5$\23\2\u00a7#\3\2\2\2\u00a8"+
-		"\u00a9\5&\24\2\u00a9\u00aa\5$\23\2\u00aa\u00ad\3\2\2\2\u00ab\u00ad\3\2"+
-		"\2\2\u00ac\u00a8\3\2\2\2\u00ac\u00ab\3\2\2\2\u00ad%\3\2\2\2\u00ae\u00b2"+
-		"\5(\25\2\u00af\u00b2\5J&\2\u00b0\u00b2\5R*\2\u00b1\u00ae\3\2\2\2\u00b1"+
-		"\u00af\3\2\2\2\u00b1\u00b0\3\2\2\2\u00b2\'\3\2\2\2\u00b3\u00b8\5*\26\2"+
-		"\u00b4\u00b8\5.\30\2\u00b5\u00b8\5\60\31\2\u00b6\u00b8\5\62\32\2\u00b7"+
-		"\u00b3\3\2\2\2\u00b7\u00b4\3\2\2\2\u00b7\u00b5\3\2\2\2\u00b7\u00b6\3\2"+
-		"\2\2\u00b8)\3\2\2\2\u00b9\u00ba\5,\27\2\u00ba\u00bb\7\4\2\2\u00bb+\3\2"+
-		"\2\2\u00bc\u00bd\5\4\3\2\u00bd\u00be\7\4\2\2\u00be\u00bf\5\64\33\2\u00bf"+
-		"-\3\2\2\2\u00c0\u00c1\7\3\2\2\u00c1\u00c2\7\4\2\2\u00c2\u00c3\5\24\13"+
-		"\2\u00c3\u00c4\7\4\2\2\u00c4\u00c5\7\4\2\2\u00c5/\3\2\2\2\u00c6\u00c7"+
-		"\7\3\2\2\u00c7\u00c8\7\4\2\2\u00c8\u00c9\5\24\13\2\u00c9\u00ca\7\4\2\2"+
-		"\u00ca\u00cb\7\4\2\2\u00cb\61\3\2\2\2\u00cc\u00cd\7\3\2\2\u00cd\u00ce"+
-		"\5\64\33\2\u00ce\u00cf\7\4\2\2\u00cf\63\3\2\2\2\u00d0\u00d1\5\66\34\2"+
-		"\u00d1\u00d2\58\35\2\u00d2\65\3\2\2\2\u00d3\u00da\b\34\1\2\u00d4\u00d5"+
-		"\f\4\2\2\u00d5\u00d6\58\35\2\u00d6\u00d7\5F$\2\u00d7\u00d9\3\2\2\2\u00d8"+
-		"\u00d4\3\2\2\2\u00d9\u00dc\3\2\2\2\u00da\u00d8\3\2\2\2\u00da\u00db\3\2"+
-		"\2\2\u00db\67\3\2\2\2\u00dc\u00da\3\2\2\2\u00dd\u00de\5:\36\2\u00de\u00df"+
-		"\5<\37\2\u00df9\3\2\2\2\u00e0\u00e7\b\36\1\2\u00e1\u00e2\f\4\2\2\u00e2"+
-		"\u00e3\5<\37\2\u00e3\u00e4\5H%\2\u00e4\u00e6\3\2\2\2\u00e5\u00e1\3\2\2"+
-		"\2\u00e6\u00e9\3\2\2\2\u00e7\u00e5\3\2\2\2\u00e7\u00e8\3\2\2\2\u00e8;"+
-		"\3\2\2\2\u00e9\u00e7\3\2\2\2\u00ea\u00ed\5D#\2\u00eb\u00ed\5> \2\u00ec"+
-		"\u00ea\3\2\2\2\u00ec\u00eb\3\2\2\2\u00ed=\3\2\2\2\u00ee\u00ef\5\4\3\2"+
-		"\u00ef\u00f0\7\4\2\2\u00f0\u00f1\5@!\2\u00f1\u00f2\7\4\2\2\u00f2?\3\2"+
-		"\2\2\u00f3\u00f4\5\64\33\2\u00f4\u00f5\5B\"\2\u00f5\u00f8\3\2\2\2\u00f6"+
-		"\u00f8\3\2\2\2\u00f7\u00f3\3\2\2\2\u00f7\u00f6\3\2\2\2\u00f8A\3\2\2\2"+
-		"\u00f9\u00fa\7\4\2\2\u00fa\u00fb\5\64\33\2\u00fb\u00fc\5B\"\2\u00fc\u00ff"+
-		"\3\2\2\2\u00fd\u00ff\3\2\2\2\u00fe\u00f9\3\2\2\2\u00fe\u00fd\3\2\2\2\u00ff"+
-		"C\3\2\2\2\u0100\u0101\7\4\2\2\u0101\u0102\5\64\33\2\u0102\u0103\7\4\2"+
-		"\2\u0103\u0108\3\2\2\2\u0104\u0108\5\4\3\2\u0105\u0108\7\7\2\2\u0106\u0108"+
-		"\7\b\2\2\u0107\u0100\3\2\2\2\u0107\u0104\3\2\2\2\u0107\u0105\3\2\2\2\u0107"+
-		"\u0106\3\2\2\2\u0108E\3\2\2\2\u0109\u010a\7\4\2\2\u010aG\3\2\2\2\u010b"+
-		"\u010c\7\4\2\2\u010cI\3\2\2\2\u010d\u010e\7\3\2\2\u010e\u010f\7\4\2\2"+
-		"\u010f\u0110\5N(\2\u0110\u0111\7\4\2\2\u0111\u0112\5\b\5\2\u0112\u0113"+
-		"\5$\23\2\u0113\u0114\5L\'\2\u0114\u0115\7\3\2\2\u0115K\3\2\2\2\u0116\u0117"+
-		"\7\3\2\2\u0117\u0118\5\b\5\2\u0118\u0119\5$\23\2\u0119\u011c\3\2\2\2\u011a"+
-		"\u011c\3\2\2\2\u011b\u0116\3\2\2\2\u011b\u011a\3\2\2\2\u011cM\3\2\2\2"+
-		"\u011d\u011e\5\64\33\2\u011e\u011f\5P)\2\u011f\u0120\5\64\33\2\u0120O"+
-		"\3\2\2\2\u0121\u0122\7\4\2\2\u0122Q\3\2\2\2\u0123\u0124\7\3\2\2\u0124"+
-		"\u0125\7\4\2\2\u0125\u0126\5N(\2\u0126\u0127\7\4\2\2\u0127\u0128\5\b\5"+
-		"\2\u0128\u0129\5$\23\2\u0129\u012a\7\3\2\2\u012aS\3\2\2\2\22gy\u0083\u0089"+
-		"\u0093\u0099\u00ac\u00b1\u00b7\u00da\u00e7\u00ec\u00f7\u00fe\u0107\u011b";
+		"\30\32\34\36 \"$&(*,.\60\62\64\668:<>@BDFHJLNPR\2\6\4\2\21\21\24\24\4"+
+		"\2\25\25\30\30\3\2\26\27\3\2\35\"\2\u0118\2T\3\2\2\2\4[\3\2\2\2\6]\3\2"+
+		"\2\2\bg\3\2\2\2\ni\3\2\2\2\fo\3\2\2\2\16q\3\2\2\2\20u\3\2\2\2\22y\3\2"+
+		"\2\2\24{\3\2\2\2\26\u0083\3\2\2\2\30\u0089\3\2\2\2\32\u008b\3\2\2\2\34"+
+		"\u0093\3\2\2\2\36\u0099\3\2\2\2 \u009b\3\2\2\2\"\u00a5\3\2\2\2$\u00ac"+
+		"\3\2\2\2&\u00b1\3\2\2\2(\u00b7\3\2\2\2*\u00b9\3\2\2\2,\u00bc\3\2\2\2."+
+		"\u00c0\3\2\2\2\60\u00c6\3\2\2\2\62\u00cc\3\2\2\2\64\u00d0\3\2\2\2\66\u00d3"+
+		"\3\2\2\28\u00dd\3\2\2\2:\u00e0\3\2\2\2<\u00ec\3\2\2\2>\u00ee\3\2\2\2@"+
+		"\u00f7\3\2\2\2B\u00fe\3\2\2\2D\u0107\3\2\2\2F\u0109\3\2\2\2H\u010b\3\2"+
+		"\2\2J\u010d\3\2\2\2L\u011b\3\2\2\2N\u011d\3\2\2\2P\u0121\3\2\2\2R\u0123"+
+		"\3\2\2\2TU\7\3\2\2UV\5\4\3\2VW\7\4\2\2WX\5\6\4\2XY\7\5\2\2YZ\7\2\2\3Z"+
+		"\3\3\2\2\2[\\\7%\2\2\\\5\3\2\2\2]^\5\b\5\2^_\5\36\20\2_\7\3\2\2\2`a\5"+
+		"\n\6\2ab\5\b\5\2bh\3\2\2\2cd\5\16\b\2de\5\b\5\2eh\3\2\2\2fh\3\2\2\2g`"+
+		"\3\2\2\2gc\3\2\2\2gf\3\2\2\2h\t\3\2\2\2ij\7\23\2\2jk\5\4\3\2kl\7\31\2"+
+		"\2lm\5\f\7\2mn\7#\2\2n\13\3\2\2\2op\7(\2\2p\r\3\2\2\2qr\5\20\t\2rs\5\24"+
+		"\13\2st\7#\2\2t\17\3\2\2\2uv\t\2\2\2v\21\3\2\2\2wz\5\20\t\2xz\7\22\2\2"+
+		"yw\3\2\2\2yx\3\2\2\2z\23\3\2\2\2{|\5\4\3\2|}\5\26\f\2}\25\3\2\2\2~\177"+
+		"\7\34\2\2\177\u0080\5\4\3\2\u0080\u0081\5\26\f\2\u0081\u0084\3\2\2\2\u0082"+
+		"\u0084\3\2\2\2\u0083~\3\2\2\2\u0083\u0082\3\2\2\2\u0084\27\3\2\2\2\u0085"+
+		"\u0086\5\32\16\2\u0086\u0087\5\34\17\2\u0087\u008a\3\2\2\2\u0088\u008a"+
+		"\3\2\2\2\u0089\u0085\3\2\2\2\u0089\u0088\3\2\2\2\u008a\31\3\2\2\2\u008b"+
+		"\u008c\5\20\t\2\u008c\u008d\5\4\3\2\u008d\33\3\2\2\2\u008e\u008f\7\34"+
+		"\2\2\u008f\u0090\5\32\16\2\u0090\u0091\5\34\17\2\u0091\u0094\3\2\2\2\u0092"+
+		"\u0094\3\2\2\2\u0093\u008e\3\2\2\2\u0093\u0092\3\2\2\2\u0094\35\3\2\2"+
+		"\2\u0095\u0096\5 \21\2\u0096\u0097\5\36\20\2\u0097\u009a\3\2\2\2\u0098"+
+		"\u009a\3\2\2\2\u0099\u0095\3\2\2\2\u0099\u0098\3\2\2\2\u009a\37\3\2\2"+
+		"\2\u009b\u009c\7\6\2\2\u009c\u009d\5\22\n\2\u009d\u009e\5\4\3\2\u009e"+
+		"\u009f\7\32\2\2\u009f\u00a0\5\30\r\2\u00a0\u00a1\7\33\2\2\u00a1\u00a2"+
+		"\7\4\2\2\u00a2\u00a3\5\"\22\2\u00a3\u00a4\7\5\2\2\u00a4!\3\2\2\2\u00a5"+
+		"\u00a6\5\b\5\2\u00a6\u00a7\5$\23\2\u00a7#\3\2\2\2\u00a8\u00a9\5&\24\2"+
+		"\u00a9\u00aa\5$\23\2\u00aa\u00ad\3\2\2\2\u00ab\u00ad\3\2\2\2\u00ac\u00a8"+
+		"\3\2\2\2\u00ac\u00ab\3\2\2\2\u00ad%\3\2\2\2\u00ae\u00b2\5(\25\2\u00af"+
+		"\u00b2\5J&\2\u00b0\u00b2\5R*\2\u00b1\u00ae\3\2\2\2\u00b1\u00af\3\2\2\2"+
+		"\u00b1\u00b0\3\2\2\2\u00b2\'\3\2\2\2\u00b3\u00b8\5*\26\2\u00b4\u00b8\5"+
+		".\30\2\u00b5\u00b8\5\60\31\2\u00b6\u00b8\5\62\32\2\u00b7\u00b3\3\2\2\2"+
+		"\u00b7\u00b4\3\2\2\2\u00b7\u00b5\3\2\2\2\u00b7\u00b6\3\2\2\2\u00b8)\3"+
+		"\2\2\2\u00b9\u00ba\5,\27\2\u00ba\u00bb\7#\2\2\u00bb+\3\2\2\2\u00bc\u00bd"+
+		"\5\4\3\2\u00bd\u00be\7\31\2\2\u00be\u00bf\5\64\33\2\u00bf-\3\2\2\2\u00c0"+
+		"\u00c1\7\7\2\2\u00c1\u00c2\7\32\2\2\u00c2\u00c3\5\24\13\2\u00c3\u00c4"+
+		"\7\33\2\2\u00c4\u00c5\7#\2\2\u00c5/\3\2\2\2\u00c6\u00c7\7\b\2\2\u00c7"+
+		"\u00c8\7\32\2\2\u00c8\u00c9\5\24\13\2\u00c9\u00ca\7\33\2\2\u00ca\u00cb"+
+		"\7#\2\2\u00cb\61\3\2\2\2\u00cc\u00cd\7\20\2\2\u00cd\u00ce\5\64\33\2\u00ce"+
+		"\u00cf\7#\2\2\u00cf\63\3\2\2\2\u00d0\u00d1\5\66\34\2\u00d1\u00d2\58\35"+
+		"\2\u00d2\65\3\2\2\2\u00d3\u00da\b\34\1\2\u00d4\u00d5\f\4\2\2\u00d5\u00d6"+
+		"\58\35\2\u00d6\u00d7\5F$\2\u00d7\u00d9\3\2\2\2\u00d8\u00d4\3\2\2\2\u00d9"+
+		"\u00dc\3\2\2\2\u00da\u00d8\3\2\2\2\u00da\u00db\3\2\2\2\u00db\67\3\2\2"+
+		"\2\u00dc\u00da\3\2\2\2\u00dd\u00de\5:\36\2\u00de\u00df\5<\37\2\u00df9"+
+		"\3\2\2\2\u00e0\u00e7\b\36\1\2\u00e1\u00e2\f\4\2\2\u00e2\u00e3\5<\37\2"+
+		"\u00e3\u00e4\5H%\2\u00e4\u00e6\3\2\2\2\u00e5\u00e1\3\2\2\2\u00e6\u00e9"+
+		"\3\2\2\2\u00e7\u00e5\3\2\2\2\u00e7\u00e8\3\2\2\2\u00e8;\3\2\2\2\u00e9"+
+		"\u00e7\3\2\2\2\u00ea\u00ed\5D#\2\u00eb\u00ed\5> \2\u00ec\u00ea\3\2\2\2"+
+		"\u00ec\u00eb\3\2\2\2\u00ed=\3\2\2\2\u00ee\u00ef\5\4\3\2\u00ef\u00f0\7"+
+		"\32\2\2\u00f0\u00f1\5@!\2\u00f1\u00f2\7\33\2\2\u00f2?\3\2\2\2\u00f3\u00f4"+
+		"\5\64\33\2\u00f4\u00f5\5B\"\2\u00f5\u00f8\3\2\2\2\u00f6\u00f8\3\2\2\2"+
+		"\u00f7\u00f3\3\2\2\2\u00f7\u00f6\3\2\2\2\u00f8A\3\2\2\2\u00f9\u00fa\7"+
+		"\34\2\2\u00fa\u00fb\5\64\33\2\u00fb\u00fc\5B\"\2\u00fc\u00ff\3\2\2\2\u00fd"+
+		"\u00ff\3\2\2\2\u00fe\u00f9\3\2\2\2\u00fe\u00fd\3\2\2\2\u00ffC\3\2\2\2"+
+		"\u0100\u0101\7\32\2\2\u0101\u0102\5\64\33\2\u0102\u0103\7\33\2\2\u0103"+
+		"\u0108\3\2\2\2\u0104\u0108\5\4\3\2\u0105\u0108\7&\2\2\u0106\u0108\7\'"+
+		"\2\2\u0107\u0100\3\2\2\2\u0107\u0104\3\2\2\2\u0107\u0105\3\2\2\2\u0107"+
+		"\u0106\3\2\2\2\u0108E\3\2\2\2\u0109\u010a\t\3\2\2\u010aG\3\2\2\2\u010b"+
+		"\u010c\t\4\2\2\u010cI\3\2\2\2\u010d\u010e\7\t\2\2\u010e\u010f\7\32\2\2"+
+		"\u010f\u0110\5N(\2\u0110\u0111\7\33\2\2\u0111\u0112\5\b\5\2\u0112\u0113"+
+		"\5$\23\2\u0113\u0114\5L\'\2\u0114\u0115\7\13\2\2\u0115K\3\2\2\2\u0116"+
+		"\u0117\7\n\2\2\u0117\u0118\5\b\5\2\u0118\u0119\5$\23\2\u0119\u011c\3\2"+
+		"\2\2\u011a\u011c\3\2\2\2\u011b\u0116\3\2\2\2\u011b\u011a\3\2\2\2\u011c"+
+		"M\3\2\2\2\u011d\u011e\5\64\33\2\u011e\u011f\5P)\2\u011f\u0120\5\64\33"+
+		"\2\u0120O\3\2\2\2\u0121\u0122\t\5\2\2\u0122Q\3\2\2\2\u0123\u0124\7\f\2"+
+		"\2\u0124\u0125\7\32\2\2\u0125\u0126\5N(\2\u0126\u0127\7\33\2\2\u0127\u0128"+
+		"\5\b\5\2\u0128\u0129\5$\23\2\u0129\u012a\7\r\2\2\u012aS\3\2\2\2\22gy\u0083"+
+		"\u0089\u0093\u0099\u00ac\u00b1\u00b7\u00da\u00e7\u00ec\u00f7\u00fe\u0107"+
+		"\u011b";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

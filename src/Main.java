@@ -1,8 +1,6 @@
 import LITTLE.LITTLELexer;
 import LITTLE.LITTLEParser;
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.io.IOException;
 
@@ -14,7 +12,7 @@ public class Main {
         String fileParts[] = source.split("/");
         String fileName = fileParts[(fileParts.length)-1].replace(".micro", "");
 
-
+        Parser p = new Parser();
 
         try {
             CharStream cs = CharStreams.fromFileName(source);
