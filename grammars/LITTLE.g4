@@ -52,14 +52,14 @@ call_expr         : id OPEN_OP expr_list CLOSE_OP ;
 expr_list         : expr expr_list_tail | ;
 expr_list_tail    : COMMA_OP expr expr_list_tail | ;
 primary           : OPEN_OP expr CLOSE_OP | id | INTLITERAL | FLOATLITERAL ;
-addop             : PLUS_OP ;
-mulop             : MULT_OP ;
+addop             : PLUS_OP | SUB_OP;
+mulop             : MULT_OP | DIV_OP;
 
 // Complex Statements and Condition
 if_stmt           : IF_KEYWORD OPEN_OP cond CLOSE_OP decl stmt_list else_part ENDIF_KEYWORD ;
 else_part         : ELSE_KEYWORD decl stmt_list | ;
 cond              : expr compop expr ;
-compop            : COMP_OP ;
+compop            : EQ_OP | LESS_OP | GREAT_OP | NOTEQ_OP | LESSEQ_OP | GREATEQ_OP ;
 
 // While statements
 while_stmt       : WHILE_KEYWORD OPEN_OP cond CLOSE_OP decl stmt_list ENDWHILE_KEYWORD ;
@@ -86,17 +86,21 @@ VOID_KEYWORD     : 'VOID';
 STR_KEYWORD      : 'STRING';
 FLT_KEYWORD      : 'FLOAT' ;
 
-PLUS_OP   : '+';
-MULT_OP   : '*';
-DIV_OP    : '/';
-SUB_OP    : '-';
-ASSIGN_OP : ':=';
-OPEN_OP   : '(';
-CLOSE_OP  : ')';
-COMMA_OP  : ',';
-COMP_OP   :  '=' | '<' | '>' | '!=' | '<=' | '>=';
-
-SEMICOLON : ';';
+PLUS_OP    : '+';
+MULT_OP    : '*';
+DIV_OP     : '/';
+SUB_OP     : '-';
+ASSIGN_OP  : ':=';
+OPEN_OP    : '(';
+CLOSE_OP   : ')';
+COMMA_OP   : ',';
+EQ_OP      :  '=';
+LESS_OP    : '<';
+GREAT_OP   : '>';
+NOTEQ_OP   : '!=';
+LESSEQ_OP  : '<=';
+GREATEQ_OP : '>=';
+SEMICOLON  : ';';
 
 // Identifier definitions
 fragment LETTER        : [a-z] | [A-Z] ;
