@@ -7,101 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c268969-eaf7-4f45-89d8-a7f155813eb1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ErrorListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ErrorStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test1.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test10.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test11.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test12.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test13.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test14.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test15.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test16.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test17.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test18.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test19.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test2.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test20.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test21.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test3.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test4.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test5.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test6.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test7.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test8.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/inputs/test9.micro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test1.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test10.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test11.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test12.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test13.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test14.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test15.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test16.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test17.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test18.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test19.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test2.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test20.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test21.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test3.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test4.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test5.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test6.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test7.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test8.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Step2/outputs/test9.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLE.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLE.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLE.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLE.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLELexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLELexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLELexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLELexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLELexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLELexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$AddopContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$AddopContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Any_typeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Any_typeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Assign_exprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Assign_exprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Assign_stmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Assign_stmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Base_stmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Base_stmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Call_exprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Call_exprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$CompopContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$CompopContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$CondContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$CondContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$DeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$DeclContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Else_partContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Else_partContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$ExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$ExprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Expr_listContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Expr_listContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Expr_list_tailContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Expr_list_tailContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Expr_prefixContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Expr_prefixContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$FactorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$FactorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Factor_prefixContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Factor_prefixContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Func_bodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Func_bodyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Func_declContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Func_declContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Func_declarationsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Func_declarationsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$IdContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$IdContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Id_listContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Id_listContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Id_tailContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Id_tailContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$If_stmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$If_stmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$MulopContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$MulopContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Param_declContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Param_declContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Param_decl_listContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Param_decl_listContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Param_decl_tailContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Param_decl_tailContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Pgm_bodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Pgm_bodyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Postfix_exprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Postfix_exprContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$PrimaryContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$PrimaryContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$ProgramContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$ProgramContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Read_stmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Read_stmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Return_stmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Return_stmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$StmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$StmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Stmt_listContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Stmt_listContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$StrContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$StrContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$String_declContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$String_declContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Var_declContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Var_declContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Var_typeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Var_typeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$While_stmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$While_stmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Write_stmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser$Write_stmtContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/LITTLE/LITTLEParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/Listner.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Compiler/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/release/Compiler.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Compiler.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/release/Micro" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Micro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/release/Micro.bat" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Micro.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/release/Outputs/test3.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Outputs/test3.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +55,9 @@
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Compilers\out\release" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,22 +108,22 @@
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="507" y="379" key="FileChooserDialogImpl/0.40.1714.1103@0.40.1714.1103" timestamp="1582655214478" />
-    <state width="1671" height="334" key="GridCell.Tab.0.bottom" timestamp="1582680305855">
+    <state width="1671" height="334" key="GridCell.Tab.0.bottom" timestamp="1582682644724">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state width="1671" height="334" key="GridCell.Tab.0.bottom/0.40.1714.1103@0.40.1714.1103" timestamp="1582680305855" />
-    <state width="1671" height="334" key="GridCell.Tab.0.center" timestamp="1582680305854">
+    <state width="1671" height="334" key="GridCell.Tab.0.bottom/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644724" />
+    <state width="1671" height="334" key="GridCell.Tab.0.center" timestamp="1582682644723">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state width="1671" height="334" key="GridCell.Tab.0.center/0.40.1714.1103@0.40.1714.1103" timestamp="1582680305854" />
-    <state width="1671" height="334" key="GridCell.Tab.0.left" timestamp="1582680305852">
+    <state width="1671" height="334" key="GridCell.Tab.0.center/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644723" />
+    <state width="1671" height="334" key="GridCell.Tab.0.left" timestamp="1582682644721">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state width="1671" height="334" key="GridCell.Tab.0.left/0.40.1714.1103@0.40.1714.1103" timestamp="1582680305852" />
-    <state width="1671" height="334" key="GridCell.Tab.0.right" timestamp="1582680305854">
+    <state width="1671" height="334" key="GridCell.Tab.0.left/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644721" />
+    <state width="1671" height="334" key="GridCell.Tab.0.right" timestamp="1582682644723">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state width="1671" height="334" key="GridCell.Tab.0.right/0.40.1714.1103@0.40.1714.1103" timestamp="1582680305854" />
+    <state width="1671" height="334" key="GridCell.Tab.0.right/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644723" />
     <state x="366" y="234" key="SettingsEditor" timestamp="1581496099540">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
@@ -219,6 +136,10 @@
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="558" y="415" key="com.intellij.ide.util.TipDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1581472148251" />
+    <state x="284" y="212" key="new project wizard" timestamp="1582909342491">
+      <screen x="0" y="40" width="1714" height="1103" />
+    </state>
+    <state x="284" y="212" key="new project wizard/0.40.1714.1103@0.40.1714.1103" timestamp="1582909342491" />
     <state x="514" y="277" key="run.anything.popup" timestamp="1582656614100">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
@@ -227,5 +148,16 @@
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="520" y="281" width="672" height="678" key="search.everywhere.popup/0.40.1714.1103@0.40.1714.1103" timestamp="1581494346756" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../Program Files (x86)/Java/Javalib/antlr-4.8-complete.jar!/org/antlr/v4/runtime/DefaultErrorStrategy.class</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
