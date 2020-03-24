@@ -1,9 +1,10 @@
 
 
-public class VarDeclNode extends DeclNode
+public class VarDeclNode extends ConcreteDeclNode
 {
-    public VarDeclNode(String typeID, String val, DeclNode par) {
-        super(typeID, val, par);
-        
+    protected ConcreteDeclNode other;
+    public VarDeclNode(final String val, final ConcreteDeclNode par) {
+      super(val, par);
     }
+
 }

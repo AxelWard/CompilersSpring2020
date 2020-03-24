@@ -1,9 +1,10 @@
 
 
-public class FuncDeclNode extends DeclNode
+public class FuncDeclNode extends ConcreteDeclNode
 {
-    public FuncDeclNode(String typeID, String val, DeclNode par) {
-        super(typeID, val, par);
-        
+    protected ConcreteDeclNode other;
+    public FuncDeclNode(final String val, final ConcreteDeclNode par) {
+      super(val, par);
     }
+
 }

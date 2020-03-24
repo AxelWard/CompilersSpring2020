@@ -9,13 +9,11 @@ import LITTLE.LITTLEBaseListener;
 
 public abstract class DeclNode extends LITTLEBaseListener
 {
-    public String typeIdentifier, value;
+    public String identifier;
     public DeclNode parent;
-    public DeclNode(String typeID, String val, DeclNode par)
+    public DeclNode(String val, DeclNode par)
     {
-        this.typeIdentifier = typeID;
         this.parent = par;
-        this.value = val;
+        this.identifier = val;
     }
-    
 }

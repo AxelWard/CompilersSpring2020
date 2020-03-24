@@ -1,7 +1,7 @@
-public class KeywordNode extends DeclNode
+public class KeywordNode extends ConcreteDeclNode
 {
-    public KeywordNode(String val, DeclNode par) {
-        super("String", val, par);
+    public KeywordNode(String val, ConcreteDeclNode par) {
+        super(val, par);
     }
 
 }
