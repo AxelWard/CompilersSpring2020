@@ -1,4 +1,4 @@
-// Grammar for Axel Ward, Ahmed Naji, and Jacob Ziehli
+// Grammar by Axel Ward, Ahmed Naji, and Jacob Ziehli
 
 // Define grammar called LITTLE
 grammar LITTLE;
@@ -7,10 +7,10 @@ grammar LITTLE;
 program  : PRG_KEYWORD id BEG_KEYWORD pgm_body END_KEYWORD EOF;
 id       : IDENTIFIER ;
 pgm_body : decl func_declarations ;
-decl     : string_decl decl | var_decl decl | ;
+decl     : string_decl decl | var_decl decl | ;     
 
 // Global string declaration
-string_decl : STR_KEYWORD id ASSIGN_OP str SEMICOLON;
+string_decl : STR_KEYWORD id ASSIGN_OP str SEMICOLON; 
 str         : STRINGLITERAL ;
 
 // Variable declaration

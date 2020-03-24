@@ -1,9 +1,10 @@
-import LITTLE.LITTLELexer;
-import LITTLE.LITTLEParser;
-import org.antlr.v4.runtime.*;
-
 import java.io.FileWriter;
 import java.io.IOException;
+
+import org.antlr.v4.runtime.*;
+
+import LITTLE.LITTLELexer;
+import LITTLE.LITTLEParser;
 
 // Code for Axel Ward, Ahmed Naji, and Jacob Ziehli
 
@@ -23,7 +24,7 @@ public class Main {
 
             parser.addErrorListener(new ErrorListener());
             parser.setErrorHandler(new ErrorStrategy());
-
+            
             parser.program();
             int syntaxErrors = parser.getNumberOfSyntaxErrors();
 
