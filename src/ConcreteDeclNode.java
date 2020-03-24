@@ -13,8 +13,8 @@ public  class ConcreteDeclNode extends AbstractDeclNode
         this.other = oth;
     }
 
-    public ConcreteDeclNode AddOtherDecl(){
-        assert other != null : "Other is null. Consider adding a child node.";
+    public ConcreteDeclNode GetOtherDecl(){
+        assert other != null : "Other is null. Consider adding a node.";
         return this.other;
     }
     

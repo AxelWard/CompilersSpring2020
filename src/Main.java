@@ -39,6 +39,7 @@ public class Main {
                 f.append("Not accepted");
             }
             f.flush();
+            f.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
