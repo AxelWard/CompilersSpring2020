@@ -1,12 +1,12 @@
-import java.util.LinkedList;
 
-public class ProgramBodyNode extends DeclNode
+
+public class ProgramBodyNode extends ConcreteDeclNode
 {
   //  public FunctionDeclarationNode funcDecl;
     protected ConcreteDeclNode other; 
     private ProgramNode program;
-    public ProgramBodyNode(String typeID, String val, ConcreteDeclNode par) {
-        super(val, par);
+    public ProgramBodyNode(final String val, final ConcreteDeclNode par) {
+      super (val, par);
         this.program.body = this.program.body == null? this : this.program.body; //Ah yes, another singleton! :D
     }
 
