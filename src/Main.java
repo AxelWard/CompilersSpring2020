@@ -28,6 +28,8 @@ public class Main {
             parser.addErrorListener(new ErrorListener());
             parser.setErrorHandler(new ErrorStrategy());
 
+            parser.program();
+
             int syntaxErrors = parser.getNumberOfSyntaxErrors();
 
             if(args.length >= 2) fileName = args[1] + "/" + fileName;
@@ -44,6 +46,9 @@ public class Main {
             Listener l = new Listener(v);
             ParseTree pt = parser.program();
             ParseTreeWalker.DEFAULT.walk(l, pt);
+
+            f.flush();
+            f.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

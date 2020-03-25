@@ -7,12 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c268969-eaf7-4f45-89d8-a7f155813eb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ajwea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Listener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SymbolTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TableStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AbstractDeclNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ConcreteDeclNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FuncDeclNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/KeywordNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MultiFuncDeclNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ParametersNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProgramBodyNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ProgramNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VarDeclNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Compiler/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ACM_Conference_Proceedings__Master__Template__1_ (4).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/ACM_Conference_Proceedings__Master__Template__1_ (4).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammars/LITTLE.g4" beforeDir="false" afterPath="$PROJECT_DIR$/grammars/LITTLE.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/release/TestFiles/Step1/fibonacci.micro" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/TestFiles/Step1/fibonacci.micro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

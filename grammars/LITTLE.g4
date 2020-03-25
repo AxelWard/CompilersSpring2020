@@ -1,32 +1,31 @@
-// Grammar for Axel Ward, Ahmed Naji, and Jacob Ziehli
+// Grammar by Axel Ward, Ahmed Naji, and Jacob Ziehli
 
 // Define grammar called LITTLE
-grammar LITTLE;
-
+grammar LITTLE;!
 // Program definitions
-program  : PRG_KEYWORD id BEG_KEYWORD pgm_body END_KEYWORD EOF;
-id       : IDENTIFIER ;
-pgm_body : decl func_declarations ;
-decl     : string_decl decl | var_decl decl | ;
+program  : PRG_KEYWORD id BEG_KEYWORD pgm_body END_KEYWORD EOF; //LHS & RHS fulfilled by ProgramNode java class
+id       : IDENTIFIER ;                                         //Fulfilled by ProgramNode.super.Value for class id
+pgm_body : decl func_declarations ;                             //LHS & RHS fulfilled by ConcreteDeclNode && MultiFuncDeclNode && ProgramBodyNode java classes
+decl     : string_decl decl | var_decl decl | ;                 //LHS Fulfilled by ConcreteDeclNode java class (RHS incomplete)
 
 // Global string declaration
-string_decl : STR_KEYWORD id ASSIGN_OP str SEMICOLON;
-str         : STRINGLITERAL ;
+string_decl : STR_KEYWORD id ASSIGN_OP str SEMICOLON; 
+str         : STRINGLITERAL ;                       
 
 // Variable declaration
-var_decl : var_type id_list SEMICOLON;
+var_decl : var_type id_list SEMICOLON;              //LHS & RHS fulfilled by ParametersNode && VarDeclNode java classes
 var_type : INT_KEYWORD | FLT_KEYWORD ;
 any_type : var_type | VOID_KEYWORD ;
 id_list  : id id_tail ;
 id_tail  : COMMA_OP id id_tail | ;
 
 // Function Paramater List
-param_decl_list   : param_decl param_decl_tail | ;
+param_decl_list   : param_decl param_decl_tail | ;           //LHS fulfilled by ParamtersNode RHS fulfilled by inheriting from ConcreteDeclNode to VarDeclNode
 param_decl        : var_type id ;
 param_decl_tail   : COMMA_OP param_decl param_decl_tail | ;
 
 // Function Declarations
-func_declarations : func_decl func_declarations | ;
+func_declarations : func_decl func_declarations | ;                                 //LHS & RHS Fulfilled by MultiFuncDeclNode && FuncDeclNde java classes
 func_decl         : FUNC_KEYWORD any_type id OPEN_OP param_decl_list CLOSE_OP BEG_KEYWORD func_body END_KEYWORD ;
 func_body         : decl stmt_list ;
 
