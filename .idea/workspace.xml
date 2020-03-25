@@ -7,14 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c268969-eaf7-4f45-89d8-a7f155813eb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ErrorListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ErrorStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/ajwea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Listener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SymbolTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TableStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Compiler/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Compiler/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/release/Compiler.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Compiler.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/release/Micro" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Micro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/release/Micro.bat" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Micro.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/release/Outputs/test3.out" beforeDir="false" afterPath="$PROJECT_DIR$/out/release/Outputs/test3.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +43,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Step2/inputs/test20.micro" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ignore.virus.scanning.warn.message" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/release/TestFiles/Step3/inputs/test5.micro" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -88,42 +88,47 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="450" y="250" key="#Notifications" timestamp="1581472189840">
+    <state x="450" y="250" key="#Notifications" timestamp="1583360256654">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state x="450" y="250" key="#Notifications/0.40.1714.1103@0.40.1714.1103" timestamp="1581472189840" />
+    <state x="450" y="250" key="#Notifications/0.40.1714.1103@0.40.1714.1103" timestamp="1583360256654" />
     <state x="615" y="443" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581496038309">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="615" y="443" key="#com.intellij.ide.util.TreeClassChooserDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1581496038309" />
-    <state x="588" y="339" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582679745975">
+    <state x="588" y="339" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583523336389">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state x="588" y="339" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1582679745975" />
+    <state x="588" y="339" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1583523336389" />
     <state x="605" y="448" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581485580988">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="605" y="448" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.40.1714.1103@0.40.1714.1103" timestamp="1581485580988" />
-    <state x="507" y="379" key="FileChooserDialogImpl" timestamp="1582655214478">
-      <screen x="0" y="40" width="1714" height="1103" />
+    <state x="757" y="470" key="FileChooserDialogImpl" timestamp="1585154543151">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state x="507" y="379" key="FileChooserDialogImpl/0.40.1714.1103@0.40.1714.1103" timestamp="1582655214478" />
-    <state width="1671" height="334" key="GridCell.Tab.0.bottom" timestamp="1582682644724">
-      <screen x="0" y="40" width="1714" height="1103" />
+    <state x="757" y="470" key="FileChooserDialogImpl/0.40.2560.1400/2560.40.2560.1400@0.40.2560.1400" timestamp="1585154543151" />
+    <state width="2517" height="441" key="GridCell.Tab.0.bottom" timestamp="1585158033039">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="1671" height="334" key="GridCell.Tab.0.bottom/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644724" />
-    <state width="1671" height="334" key="GridCell.Tab.0.center" timestamp="1582682644723">
-      <screen x="0" y="40" width="1714" height="1103" />
+    <state width="2517" height="441" key="GridCell.Tab.0.bottom/0.40.2560.1400/2560.40.2560.1400@0.40.2560.1400" timestamp="1585158033039" />
+    <state width="2517" height="441" key="GridCell.Tab.0.center" timestamp="1585158033039">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="1671" height="334" key="GridCell.Tab.0.center/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644723" />
-    <state width="1671" height="334" key="GridCell.Tab.0.left" timestamp="1582682644721">
-      <screen x="0" y="40" width="1714" height="1103" />
+    <state width="2517" height="441" key="GridCell.Tab.0.center/0.40.2560.1400/2560.40.2560.1400@0.40.2560.1400" timestamp="1585158033039" />
+    <state width="2517" height="441" key="GridCell.Tab.0.left" timestamp="1585158033039">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="1671" height="334" key="GridCell.Tab.0.left/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644721" />
-    <state width="1671" height="334" key="GridCell.Tab.0.right" timestamp="1582682644723">
-      <screen x="0" y="40" width="1714" height="1103" />
+    <state width="2517" height="441" key="GridCell.Tab.0.left/0.40.2560.1400/2560.40.2560.1400@0.40.2560.1400" timestamp="1585158033039" />
+    <state width="2517" height="441" key="GridCell.Tab.0.right" timestamp="1585158033039">
+      <screen x="0" y="40" width="2560" height="1400" />
     </state>
     <state width="1671" height="334" key="GridCell.Tab.0.right/0.40.1714.1103@0.40.1714.1103" timestamp="1582682644723" />
+    <state width="2517" height="441" key="GridCell.Tab.0.right/0.40.2560.1400/2560.40.2560.1400@0.40.2560.1400" timestamp="1585158033039" />
     <state x="366" y="234" key="SettingsEditor" timestamp="1581496099540">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
@@ -136,18 +141,19 @@
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="558" y="415" key="com.intellij.ide.util.TipDialog/0.40.1714.1103@0.40.1714.1103" timestamp="1581472148251" />
-    <state x="284" y="212" key="new project wizard" timestamp="1582909342491">
+    <state x="284" y="212" key="new project wizard" timestamp="1583530216370">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state x="284" y="212" key="new project wizard/0.40.1714.1103@0.40.1714.1103" timestamp="1582909342491" />
+    <state x="284" y="212" key="new project wizard/0.40.1714.1103@0.40.1714.1103" timestamp="1583530216370" />
     <state x="514" y="277" key="run.anything.popup" timestamp="1582656614100">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
     <state x="514" y="277" key="run.anything.popup/0.40.1714.1103@0.40.1714.1103" timestamp="1582656614100" />
-    <state x="520" y="281" width="672" height="678" key="search.everywhere.popup" timestamp="1581494346756">
+    <state x="520" y="281" width="672" height="678" key="search.everywhere.popup" timestamp="1584193866653">
       <screen x="0" y="40" width="1714" height="1103" />
     </state>
-    <state x="520" y="281" width="672" height="678" key="search.everywhere.popup/0.40.1714.1103@0.40.1714.1103" timestamp="1581494346756" />
+    <state x="520" y="281" width="672" height="678" key="search.everywhere.popup/0.40.1714.1103@0.40.1714.1103" timestamp="1584193866653" />
+    <state x="777" y="346" width="1004" height="861" key="search.everywhere.popup/0.40.2560.1400/2560.40.2560.1400@0.40.2560.1400" timestamp="1583363581508" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

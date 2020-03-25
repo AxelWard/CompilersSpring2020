@@ -1,6 +1,8 @@
 import LITTLE.LITTLELexer;
 import LITTLE.LITTLEParser;
 import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,7 +11,9 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String args[]) {
-        String source = args[0];
+        // String source = args[0];
+        String source = "out/release/TestFiles/Step3/inputs/test5.micro";
+
         String fileParts[] = source.split("/");
         String fileName = fileParts[(fileParts.length)-1].replace(".micro", "");
 
@@ -24,20 +28,22 @@ public class Main {
             parser.addErrorListener(new ErrorListener());
             parser.setErrorHandler(new ErrorStrategy());
 
-            parser.program();
             int syntaxErrors = parser.getNumberOfSyntaxErrors();
 
             if(args.length >= 2) fileName = args[1] + "/" + fileName;
-
             FileWriter f = new FileWriter(fileName + ".out");
-            if(syntaxErrors == 0) {
-                System.out.println("Accepted");
-                f.append("Accepted");
-            } else {
-                System.out.println("Not accepted");
+            if(syntaxErrors != 0) {
+                System.out.println("Syntax errors in file!");
                 f.append("Not accepted");
+                f.flush();
+                System.exit(-1);
             }
-            f.flush();
+
+            Vocabulary v = parser.getVocabulary();
+
+            Listener l = new Listener(v);
+            ParseTree pt = parser.program();
+            ParseTreeWalker.DEFAULT.walk(l, pt);
         } catch (IOException e) {
             e.printStackTrace();
         }
