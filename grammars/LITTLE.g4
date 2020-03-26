@@ -1,7 +1,7 @@
 // Grammar by Axel Ward, Ahmed Naji, and Jacob Ziehli
 
 // Define grammar called LITTLE
-grammar LITTLE;!
+grammar LITTLE;
 // Program definitions
 program  : PRG_KEYWORD id BEG_KEYWORD pgm_body END_KEYWORD EOF; //LHS & RHS fulfilled by ProgramNode java class
 id       : IDENTIFIER ;                                         //Fulfilled by ProgramNode.super.Value for class id
@@ -16,8 +16,8 @@ str         : STRINGLITERAL ;
 var_decl : var_type id_list SEMICOLON;              //LHS & RHS fulfilled by ParametersNode && VarDeclNode java classes
 var_type : INT_KEYWORD | FLT_KEYWORD ;
 any_type : var_type | VOID_KEYWORD ;
-id_list  : id id_tail ;
-id_tail  : COMMA_OP id id_tail | ;
+id_list  : id id_tail ;                             //lines 19 & 20 fullfilled by simple string linkedLists within their would-be parent Nodes. 
+id_tail  : COMMA_OP id id_tail | ;                  //(kinda cheating the dev process :P )
 
 // Function Paramater List
 param_decl_list   : param_decl param_decl_tail | ;           //LHS fulfilled by ParamtersNode RHS fulfilled by inheriting from ConcreteDeclNode to VarDeclNode

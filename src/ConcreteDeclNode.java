@@ -1,12 +1,13 @@
 
-public  class ConcreteDeclNode extends AbstractDeclNode
+public  class ConcreteDeclNode extends AbstractDeclNode 
 {
-    public String identifier;
     public ConcreteDeclNode parent;
     protected ConcreteDeclNode other;
-    public ConcreteDeclNode(String val, ConcreteDeclNode par)
+    public char terminator;
+    public ConcreteDeclNode(String val, ConcreteDeclNode par, String term)
     {
         super(val, par);
+        this.terminator = term;
     }
     public void AddOtherDecl(ConcreteDeclNode oth){
         assert other == null : "other is non-null. Consider getting its child node and adding there.";
@@ -17,5 +18,15 @@ public  class ConcreteDeclNode extends AbstractDeclNode
         assert other != null : "Other is null. Consider adding a node.";
         return this.other;
     }
+    @Override
+    public String toString() { 
+            if(other != null)
+            {
+                return this.identifier  + '\t' + other.toString();
+            } else{
+                return this.identifier + terminator;
+            }
+         
+    } 
     
 }
