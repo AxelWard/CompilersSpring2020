@@ -11,8 +11,8 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String args[]) {
-        // String source = args[0];
-        String source = "out/release/TestFiles/Step3/inputs/test5.micro";
+        String source = args[0];
+        // String source = "out/release/TestFiles/Step3/inputs/test21.micro";
 
         String fileParts[] = source.split("/");
         String fileName = fileParts[(fileParts.length)-1].replace(".micro", "");
@@ -27,8 +27,6 @@ public class Main {
 
             parser.addErrorListener(new ErrorListener());
             parser.setErrorHandler(new ErrorStrategy());
-
-            parser.program();
 
             int syntaxErrors = parser.getNumberOfSyntaxErrors();
 

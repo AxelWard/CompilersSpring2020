@@ -17,7 +17,7 @@ public class Listener extends LITTLEBaseListener {
     Listener(Vocabulary v) {
         this.voc = v;
         this.TS = new TableStack();
-        blockNumber = -1;
+        blockNumber = 0;
     }
 
     @Override
@@ -27,12 +27,12 @@ public class Listener extends LITTLEBaseListener {
 
         // Add all global variables
         ParseTree variableTree = ctx.getChild(3);
-
-        if(variableTree.getChildCount() > 0) {
-            variableTree = variableTree.getChild(0);
+        if(variableTree != null) {
+            if (variableTree.getChildCount() > 0) {
+                variableTree = variableTree.getChild(0);
+                getVariables(variableTree);
+            }
         }
-
-        getVariables(variableTree);
 
         TS.addTable(current);
     }
@@ -49,26 +49,40 @@ public class Listener extends LITTLEBaseListener {
         current = new SymbolTable(functionName);
 
         // Add all function variables (parameters and declared variables
-        ParseTree params = ctx.getChild(3);
+        ParseTree params = ctx.getChild(4);
 
-        while(params.getChildCount() == 2) {
-            // Get variable from parameter list
-            ParseTree param = params.getChild(0);
-            String varType = param.getChild(0).getChild(0).toString();
-            String varName = param.getChild(1).getChild(0).toString();
+        while(params.getChildCount() > 1) {
+            if(params.getChildCount() == 2) {
+                // Get variable from parameter list
+                ParseTree param = params.getChild(0);
+                String varType = param.getChild(0).getChild(0).toString();
+                String varName = param.getChild(1).getChild(0).toString();
 
-            if(TS.checkStack(varName) && current.checkTable(varName)) {
-                current.push_var(varName, varType);
-            } else {
-                System.out.println("DECLARATION ERROR " + varName);
+                if (current.checkTable(varName)) {
+                    current.push_var(varName, varType);
+                }
+
+                params = params.getChild(1);
+            } else if(params.getChildCount() == 3) {
+                // Get variable from parameter list
+                ParseTree param = params.getChild(1);
+                String varType = param.getChild(0).getChild(0).toString();
+                String varName = param.getChild(1).getChild(0).toString();
+
+                if (current.checkTable(varName)) {
+                    current.push_var(varName, varType);
+                }
+
+                params = params.getChild(2);
             }
-
-            params = params.getChild(1);
         }
 
-        if(ctx.getChild(4).getChildCount() > 0) {
-            ParseTree funcDecl = ctx.getChild(4).getChild(0);
-            getVariables(funcDecl);
+        ParseTree variableTree = ctx.getChild(7);
+        if(variableTree != null) {
+            if (variableTree.getChildCount() > 0) {
+                variableTree = variableTree.getChild(0);
+                getVariables(variableTree);
+            }
         }
 
         TS.addTable(current);
@@ -98,25 +112,33 @@ public class Listener extends LITTLEBaseListener {
 
     @Override
     public void enterElse_part(LITTLEParser.Else_partContext ctx) {
-        blockNumber++;
-        SymbolTable elseTable = new SymbolTable("BLOCK " + blockNumber);
+        if(ctx.getChildCount() != 0) {
+            blockNumber++;
+            SymbolTable current = new SymbolTable("BLOCK " + blockNumber);
 
-        // Add all variables from within the else statement
-        ParseTree variableTree = ctx.getChild(4);
-        getVariables(variableTree);
+            // Add all variables from within the else statement
+            ParseTree variableTree = ctx.getChild(1);
+            if (variableTree != null) {
+                if (variableTree.getChildCount() > 0) {
+                    getVariables(variableTree);
+                }
+            }
 
-        TS.addTable(current);
+            TS.addTable(current);
+        }
     }
 
     @Override
     public void exitElse_part(LITTLEParser.Else_partContext ctx) {
-        TS.popTable();
+        if(ctx.getChildCount() != 0) {
+            TS.popTable();
+        }
     }
 
     @Override
     public void enterWhile_stmt(LITTLEParser.While_stmtContext ctx) {
         blockNumber++;
-        current = new SymbolTable("BLOCK" + blockNumber);
+        current = new SymbolTable("BLOCK " + blockNumber);
 
         // Add all variables from within the while statement
         ParseTree variableTree = ctx.getChild(4);

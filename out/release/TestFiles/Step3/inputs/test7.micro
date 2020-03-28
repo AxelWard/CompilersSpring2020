@@ -8,7 +8,6 @@ BEGIN
 
 	FUNCTION INT F (INT n)
 	BEGIN
-
 		IF (n > 2)
 			RETURN F(n-1)+F(n-2);
 		ENDIF
