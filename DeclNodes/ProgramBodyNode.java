@@ -1,4 +1,4 @@
-
+package DeclNodes;
 
 public class ProgramBodyNode extends ConcreteDeclNode
 {

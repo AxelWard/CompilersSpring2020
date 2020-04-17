@@ -1,4 +1,4 @@
-
+package DeclNodes;
 
 public class ParametersNode extends ConcreteDeclNode
 {

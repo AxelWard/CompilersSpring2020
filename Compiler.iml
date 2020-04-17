@@ -10,11 +10,12 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://C:/Program Files (x86)/Java/Javalib/antlr-4.8-complete.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Program Files (x86)/Java/Javalib/antlr-4.8-complete.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="antlr-4.8-complete" level="project" />
   </component>
 </module>

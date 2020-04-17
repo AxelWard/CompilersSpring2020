@@ -1,3 +1,5 @@
+package DeclNodes;
+
 import jdk.internal.org.objectweb.asm.tree.ParameterNode;
 
 public class FuncDeclNode extends ConcreteDeclNode

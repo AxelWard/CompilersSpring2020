@@ -1,3 +1,4 @@
+package DeclNodes;
 
 import LITTLE.LITTLEBaseListener;
 

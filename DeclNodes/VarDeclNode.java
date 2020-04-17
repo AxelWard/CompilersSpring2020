@@ -1,3 +1,5 @@
+package DeclNodes;
+
 import java.util.LinkedList;
 
 public class VarDeclNode extends ConcreteDeclNode {

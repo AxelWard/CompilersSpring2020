@@ -3,29 +3,29 @@
 // Define grammar called LITTLE
 grammar LITTLE;
 // Program definitions
-program  : PRG_KEYWORD id BEG_KEYWORD pgm_body END_KEYWORD EOF; //LHS & RHS fulfilled by ProgramNode java class
-id       : IDENTIFIER ;                                         //Fulfilled by ProgramNode.super.Value for class id
-pgm_body : decl func_declarations ;                             //LHS & RHS fulfilled by ConcreteDeclNode && MultiFuncDeclNode && ProgramBodyNode java classes
-decl     : string_decl decl | var_decl decl | ;                 //LHS Fulfilled by ConcreteDeclNode java class (RHS incomplete)
+program  : PRG_KEYWORD id BEG_KEYWORD pgm_body END_KEYWORD EOF; //LHS & RHS fulfilled by DeclNodes.ProgramNode java class
+id       : IDENTIFIER ;                                         //Fulfilled by DeclNodes.ProgramNode.super.Value for class id
+pgm_body : decl func_declarations ;                             //LHS & RHS fulfilled by DeclNodes.ConcreteDeclNode && DeclNodes.MultiFuncDeclNode && DeclNodes.ProgramBodyNode java classes
+decl     : string_decl decl | var_decl decl | ;                 //LHS Fulfilled by DeclNodes.ConcreteDeclNode java class (RHS incomplete)
 
 // Global string declaration
 string_decl : STR_KEYWORD id ASSIGN_OP str SEMICOLON; 
 str         : STRINGLITERAL ;                       
 
 // Variable declaration
-var_decl : var_type id_list SEMICOLON;              //LHS & RHS fulfilled by ParametersNode && VarDeclNode java classes
+var_decl : var_type id_list SEMICOLON;              //LHS & RHS fulfilled by DeclNodes.ParametersNode && DeclNodes.VarDeclNode java classes
 var_type : INT_KEYWORD | FLT_KEYWORD ;
 any_type : var_type | VOID_KEYWORD ;
 id_list  : id id_tail ;                             //lines 19 & 20 fullfilled by simple string linkedLists within their would-be parent Nodes. 
 id_tail  : COMMA_OP id id_tail | ;                  //(kinda cheating the dev process :P )
 
 // Function Paramater List
-param_decl_list   : param_decl param_decl_tail | ;           //LHS fulfilled by ParamtersNode RHS fulfilled by inheriting from ConcreteDeclNode to VarDeclNode
+param_decl_list   : param_decl param_decl_tail | ;           //LHS fulfilled by ParamtersNode RHS fulfilled by inheriting from DeclNodes.ConcreteDeclNode to DeclNodes.VarDeclNode
 param_decl        : var_type id ;
 param_decl_tail   : COMMA_OP param_decl param_decl_tail | ;
 
 // Function Declarations
-func_declarations : func_decl func_declarations | ;                                 //LHS & RHS Fulfilled by MultiFuncDeclNode && FuncDeclNde java classes
+func_declarations : func_decl func_declarations | ;                                 //LHS & RHS Fulfilled by DeclNodes.MultiFuncDeclNode && FuncDeclNde java classes
 func_decl         : FUNC_KEYWORD any_type id OPEN_OP param_decl_list CLOSE_OP BEG_KEYWORD func_body END_KEYWORD ;
 func_body         : decl stmt_list ;
 

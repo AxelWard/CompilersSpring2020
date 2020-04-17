@@ -1,4 +1,4 @@
-
+package DeclNodes;
 
 // Code for Axel Ward, Ahmed Naji, and Jacob Ziehli
 /*Reference Material (Visited 3/22/2020 @ 12:40 pm): https://stackoverflow.com/questions/29971097/how-to-create-ast-with-antlr4 */

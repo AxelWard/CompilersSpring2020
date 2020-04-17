@@ -1,5 +1,6 @@
+package DeclNodes;
 
-public  class ConcreteDeclNode extends AbstractDeclNode 
+public  class ConcreteDeclNode extends AbstractDeclNode
 {
     public ConcreteDeclNode parent;
     protected ConcreteDeclNode other;
