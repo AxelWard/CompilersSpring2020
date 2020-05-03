@@ -27,7 +27,6 @@ public  class ConcreteDeclNode extends AbstractDeclNode
             } else{
                 return this.identifier + terminator;
             }
-         
     } 
     
 }

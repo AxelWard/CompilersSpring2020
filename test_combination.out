@@ -1,0 +1,49 @@
+var GLOBALa
+var GLOBALb
+var GLOBALc
+jsr main
+sys halt
+label main
+move 20 GLOBALa
+move 30 GLOBALb
+move 40 GLOBALc
+move GLOBALa r1
+move GLOBALb r2
+muli r1 r2
+move GLOBALc r3
+move r1 r4
+addi r3 r4
+move GLOBALa r5
+move GLOBALb r6
+muli r5 r6
+move r5 r7
+move GLOBALc r8
+addi r7 r8
+move r7 r9
+move GLOBALa r10
+divi r9 r10
+move r3 r11
+move r9 r12
+addi r11 r12
+move r11 r13
+move 20 r14
+addi r13 r14
+move r13 GLOBALc
+move GLOBALb r15
+move GLOBALb r16
+muli r15 r16
+move r15 r17
+move GLOBALa r18
+addi r17 r18
+move r17 GLOBALb
+move GLOBALb r19
+move GLOBALa r20
+muli r19 r20
+move r19 r21
+move GLOBALa r22
+divi r21 r22
+move r21 GLOBALa
+sys writei GLOBALc
+sys writei GLOBALb
+sys writei GLOBALa
+ret

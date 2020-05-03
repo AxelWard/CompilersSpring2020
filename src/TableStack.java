@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class TableStack {
@@ -9,7 +8,6 @@ public class TableStack {
     }
 
     public void addTable(SymbolTable s) {
-        s.print_table();
         stack.add(s);
     }
 
@@ -27,5 +25,49 @@ public class TableStack {
         return true;
     }
 
+    public String getCompilerName(String ID, String blockName) {
+        String name = "";
 
+        for(int i = 0; i < stack.size(); i++) {
+            SymbolTable currentTable = stack.get(i);
+            for (int j = 0; j < currentTable.size(); j++) {
+                if(currentTable.getVanillaName(j).equals(ID)) {
+                    name = currentTable.getCompilerName(j);
+                    break;
+                }
+            }
+
+        }
+
+        return name;
+    }
+
+    public String getVariableType(String ID, String blockName) {
+        String name = "";
+
+        for(int i = 0; i < stack.size(); i++) {
+            SymbolTable currentTable = stack.get(i);
+            for (int j = 0; j < currentTable.size(); j++) {
+                if(currentTable.getVanillaName(j).equals(ID)) {
+                    name = currentTable.getType(j);
+                    break;
+                }
+            }
+        }
+
+        return name;
+    }
+
+    public void generateAssemblyDeclarations(AssemblyWriter aw) {
+        for(int i = 0; i < stack.size(); i++) {
+            SymbolTable currentTable = stack.get(i);
+            for(int j = 0; j < currentTable.size(); j++) {
+                if(currentTable.getType(j).equals("STRING")) {
+                    aw.createStr(currentTable.getCompilerName(j), currentTable.getValue(j));
+                } else {
+                    aw.createVar(currentTable.getCompilerName(j));
+                }
+            }
+        }
+    }
 }

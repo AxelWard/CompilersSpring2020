@@ -1,0 +1,30 @@
+var GLOBALa
+var GLOBALb
+var GLOBALc
+var GLOBALd
+var GLOBALe
+str GLOBALnewline "\n"
+jsr main
+sys halt
+label main
+move 1 GLOBALa
+move 2 GLOBALb
+sys readi GLOBALc
+sys readi GLOBALd
+move GLOBALa r1
+move GLOBALc r2
+muli r1 r2
+move GLOBALb r3
+move GLOBALd r4
+muli r3 r4
+move r1 r5
+move r3 r6
+addi r5 r6
+move r5 GLOBALe
+sys writei GLOBALc
+sys writes GLOBALnewline
+sys writei GLOBALd
+sys writes GLOBALnewline
+sys writei GLOBALe
+sys writes GLOBALnewline
+ret
